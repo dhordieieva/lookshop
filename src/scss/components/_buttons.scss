@@ -1,0 +1,44 @@
+.btn {
+  position: relative;
+  // display: block;
+  display: inline-block;
+  padding: 12px 15px;
+  font-size: 16px;
+  min-width: 208px;
+  font-weight: 700;
+  line-height: 35px;
+  color: #696969;
+  text-align: center;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  vertical-align: middle;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  letter-spacing: 2px;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  cursor: pointer;
+  @include to768 {
+    padding: 8px 10px;
+  line-height: 32px;
+
+  }
+  &.wrap-icon {
+    font-size: 0;
+    span {font-size: 16px;}
+    svg {
+      font-size: 18px;
+      margin-right: 7px;
+    }
+  }
+  span {
+    display: inline-block;
+    line-height: 25px;
+  }
+}
+
+.btn.full {width: 100%;} 
+.btn.left  {float: left;} 
+.btn.right {float: right;}
+.btn.dib {display: inline-block;}

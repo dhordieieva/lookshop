@@ -1,0 +1,22 @@
+// Tabbable tabs
+// -------------------------
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  .tab-pane {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.collapse {
+  display: none;
+  &.in      { display: block; }
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease, visibility 0.35s ease;
+}

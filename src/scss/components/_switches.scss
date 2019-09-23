@@ -1,0 +1,53 @@
+//   .switch
+//     .switch-item
+//       input(type="radio", id="video_quality_all", name="video_quality", checked)
+//       label(for="video_quality_all") All
+
+.switch {
+  display: inline-block;
+  .switch-item {
+    vertical-align: middle;
+    text-align: center;
+    input {display: none;}
+    input:checked + label {
+      color: #323232;
+      background: #fff;
+      border-color: $secondary;
+    }
+    label {
+      display: block;
+      position: relative;
+      line-height: 35px;
+      background: transparent;
+      color: #979797;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background .3s;
+      padding: 0 10px;
+      border-bottom: 1px solid transparent;
+      transition: color .3s, border .3s, background .3s;
+      user-select: none;
+      &:hover {
+        color: #323232;
+        background: #fff;
+        border-color: $secondary;
+      }
+    }
+    &.arrow {
+      input:checked + label:after {display: block;}
+      label {
+        padding: 0 30px 0 10px;
+        &:after {
+          display: none;
+          content: '';
+          position: absolute;
+          right: 10px; top: 50%;
+          margin-top: -3px;
+          border-style: solid;
+          border-width: 6px 5px 0 5px;
+          border-color: $secondary transparent transparent transparent;
+        }
+      }
+    }
+  }
+}

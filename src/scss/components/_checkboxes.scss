@@ -1,0 +1,159 @@
+
+.wrap-checkbox-switcher {
+  // HOW Insert to Jade
+  // .wrap-checkbox-switcher
+  //   .checkbox-switcher
+  //     input(type="checkbox", id="sources_all")
+  //     label(for="sources_all")
+  //       span all
+  overflow: hidden;
+  .checkbox-switcher {
+    overflow: hidden;
+    border-radius: 6px;
+    width: 30px;
+    height: 13px;
+    margin-right: 5px;
+    float: left;
+    input { display: none; }
+    input + label {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #373e4e;
+      cursor: pointer;
+      position: relative;
+      font-size: 0;
+      border-radius: 6px;
+      transition: background .3s;
+      span {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        padding: 0 5px;
+        color: #8a95a6;
+        font-size: 9px;
+        text-transform: lowercase;
+        line-height: 13px;
+        user-select: none;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        height: 13px;
+        width: 13px;
+        background: #737c90;
+        border-radius: 50%;
+        z-index: 2;
+        transform: translateX(0);
+        transition: transform 0.3s linear, background 0.3s linear;
+      }
+    }
+    input:checked + label {
+      background: $secondary;
+      span {display: none;}
+      &:after {
+        transform: translateX(17px);
+        background: #fff;
+
+      }
+    }
+    input:disabled + label {
+      cursor: default;
+    }
+  }
+}
+
+
+//Custom Inputs radio, check
+  .wrap-fcustominp {
+    // HOW Insert to Jade
+    // .wrap-fcustominp
+    //   span.fcustominp
+    //     input#fsearch-with-avatars(type='checkbox')
+    //     label(for='fsearch-with-avatars')
+    //   label(for='fsearch-with-avatars').fcustominp-label Only with photo
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    & + .wrap-fcustominp {margin-top: 5px;}
+    .fcustominp-label {
+      float: left;
+      font-size: 18px;
+      line-height: 26px;
+      color: #222222;
+      cursor: pointer;
+      transition: color .3s;
+      margin-left: 9px;
+    }
+    .fcustominp-label-block {
+      border: 1px solid #cccccc;
+      background: #f8f8f8;
+      padding: 3px 10px 3px 3px;
+      cursor: pointer;
+      float: left;
+      border-radius: 4px;
+      transition: border .3s, background .3s;
+      &:hover,
+      &.active {
+        background: $secondary;
+        border-color: $secondary;
+        .fcustominp-label {color: #fff;}
+      }
+    }
+  }
+  .fcustominp {
+    float: left;
+    overflow: hidden;
+    width: 28px; height: 26px;
+    padding: 0 1px;
+    flex: 0 0 28px;
+    // border-radius: 2px;
+    input {display: none;}
+    label {
+      position: relative;
+      display: block;
+      width: 100%; height: 100%;
+      background: #f5f5f5;
+      border: 1px solid #dcdcdc;
+      cursor: pointer;
+      border-radius: 2px;
+      transform: translateZ(0);
+    }
+    input[type=checkbox]:checked + label:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2px; left: 6px;
+   
+      /*Make it a small rectangle so the border will create an L-shape*/
+      width: 8px;
+      height: 12px;
+   
+      /*Add a white border on the bottom and left, creating that 'L' */
+      border: solid $secondary;
+      border-width: 0 3px 3px 0;
+   
+      /*Rotate the L 45 degrees to turn it into a checkmark*/
+      transform: rotate(45deg);
+    }
+
+    input[type=radio] + label {
+      border-radius: 50%;
+      background: #f5f5f5;
+    }
+    input[type=radio]:checked + label:after {
+      content: '';
+      position: absolute;
+      
+      background: $select-check-radio;
+      border-radius: 50%;
+      top: 7px; left: 7px;
+      width: 10px; height: 10px;
+      background: $secondary;
+      z-index: 1;
+    }
+  }
+
+//Custom Inputs

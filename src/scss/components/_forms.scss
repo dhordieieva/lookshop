@@ -1,0 +1,108 @@
+.wrap-form {
+  overflow: hidden;
+  background: #fff;
+}
+  .head-prompt {
+    float: right;
+    line-height: 30px;
+  }
+  .form-row {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+    @include to640 {margin-bottom: 8px;}
+    .prompt {
+      font-size: 14px;
+      line-height: 20px;
+      display: block;
+      margin: 5px 0;
+      color: #6B6B6B;
+      a {
+        text-decoration: underline;
+        color: #7e5658;
+        &:hover {text-decoration: none}
+      }
+    }
+    .holder {overflow: hidden;position: relative;}
+    .notedit {
+      margin-left: 145px;
+    }
+
+    .hint {
+      font-size: 11px;
+      line-height: 18px;
+      color: #62696e;
+      margin: 5px 0 0 0;
+    }
+  }
+  .flabel {
+    // width: 145px;
+    // float: left;
+    // padding-right: 15px; 
+    color: #292828;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: left;
+    font-weight: 700;
+    .star {color: #ff0000; margin-left: 2px;}
+  }
+  .finp, .ftext {
+    padding: 0 23px;
+    background-color: $forms-bg;
+    color: $forms-color;
+    font-size: 18px; 
+    line-height: 53px;
+    border: 1px solid #ebebeb;
+    width: 100%;
+    transition: border 0.3s linear;
+    &.error {
+      border-color: $secondary;
+    }
+    @include to768 {
+      padding: 0 15px;
+      line-height: 44px;
+    }
+    &:-moz-placeholder {color: $forms-color;}
+    &::-moz-placeholder {color: $forms-color; opacity: 1;}
+    &::-webkit-input-placeholder {color: $forms-color;}
+    &:-ms-input-placeholder {color: $forms-color;}
+    &::placeholder {color: $forms-color;}
+    &:focus:-moz-placeholder {color: transparent;}
+    &:focus::-moz-placeholder {color: transparent;}
+    &:focus::-webkit-input-placeholder {color: transparent;}
+    &:focus:-ms-input-placeholder {color: transparent;}
+    &:focus::placeholder {color: transparent;}
+  }
+  .finp {
+    height: 53px;
+    &.finp-footer {
+      padding: 0 23px;
+      background-color: $forms-bg;
+      color: #8d8d8d;
+      font-size: 20px; 
+      height: 57px;
+      line-height: 57px;
+      border: 1px solid #dcdcdc;
+      width: 100%;
+    }
+  }
+  .ftext {
+    max-width: 100%;
+    padding: 14px 10px;
+    line-height: 16px;
+    height: 110px;
+  }
+
+  .field_error {
+    color: #ff0000; 
+    font-size: 13px;
+    margin: 5px 0;
+    clear: both;
+  }
+
+
+  .wrap-captcha-inp {
+    overflow: hidden;
+    .flabel {float: none;}
+  }
+/*Input, label, textarea - main styles*/

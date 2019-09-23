@@ -1,0 +1,8 @@
+{
+  "dist": "./dist/",
+  "scss": "./src/scss/**/*.scss",
+  "js": "./src/js/**/*.js",
+  "img": "./src/img/**",
+  "fonts": "./src/fonts/**",
+  "pug": ["./src/views/**/*.pug", "!./src/views/templates/**", "!./src/views/partials/**", "!./src/views/layouts/**"]
+}
