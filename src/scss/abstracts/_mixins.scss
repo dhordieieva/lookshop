@@ -1,0 +1,33 @@
+@mixin respond-from($from) {
+  @if map-has-key($breakpoints, $from) {
+    @media (min-width: #{map-get($breakpoints, $from)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$from}` - $from. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin respond-to($to) {
+  @if map-has-key($breakpoints, $to) {
+    @media (max-width: #{map-get($breakpoints, $to) - 1}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$to}` - $to. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin respond-range($from, $to) {
+  @include respond-from($from) {
+    @include respond-to($to) {
+      @content
+    }
+  }
+}

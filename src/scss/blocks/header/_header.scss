@@ -1,1 +1,16 @@
-.header {}
+.header {
+  height: 100px;
+  background: $secondary;
+  border-bottom: 10px solid $auxiliary;
+
+  @include respond-to(xxs) {
+    background: yellow;
+  }
+  @include respond-range(sm, md) {
+    background: red;
+  }
+  @include respond-from(lg) {
+    background: brown;
+  }
+
+}
