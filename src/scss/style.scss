@@ -1,6 +1,6 @@
 /* Configuration and helpers */
 @import 'abstracts/variables';
-// @import 'abstracts/functions';
+//@import 'abstracts/functions';
 @import 'abstracts/mixins';
 
 @import "vendor/normalize";
@@ -9,17 +9,17 @@
 @import "base/fonts";
 @import "base/base";
 
-// @import "components/forms";
-// @import "components/buttons";
-// @import "components/tabs";
-// @import "components/checkboxes";
-// @import "components/switches";
+//@import "components/forms";
+//@import "components/buttons";
+//@import "components/tabs";
+//@import "components/checkboxes";
+//@import "components/switches";
 
 
-// @import "blocks/main/header";
-// @import "blocks/main/footer";
-// @import "blocks/main/navigation";
+@import "blocks/header/index";
+@import "blocks/slider-main";
+//@import "blocks/main/footer";
 
 
-// @import "vendor/vendor1";
+//@import "vendor/vendor1";
 

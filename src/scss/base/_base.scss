@@ -52,9 +52,6 @@ ul {list-style: none;}
 //    white-space: nowrap;
 //    text-overflow: ellipsis;
 //}
-//.fw-light  {font-weight: 300!important;}
-//.fw-normal {font-weight: 400!important;}
-//.fw-bold   {font-weight: 700!important;}
 //.table {display: table; width: 100%;}
 //.table-cell {display: table-cell; vertical-align: middle;}
 
@@ -63,7 +60,8 @@ ul {list-style: none;}
 
 body {
   position: relative;
-  margin: 0px;  padding:0px;
+  margin: 0px;
+  padding:0px;
   width: 100%;
   font-family: 'Calibri', sans-serif;
   font-size: 16px;

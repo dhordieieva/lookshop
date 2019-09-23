@@ -51,8 +51,7 @@ gulp.task('scss', function () {
        sourcemap: true,
        outputStyle: 'expanded'
     })
-    .on('error', sass.logError))
-    .on('error', notify.onError("Task SCSS Error: <%= error.message %>"))
+    .on('error', notify.onError("Task SCSS Error: <%= error.message %>")))
     .pipe(sourcemaps.init())
     .pipe(prefixer({
       browsers: ["last 50 version", "> 1%"],
@@ -117,7 +116,7 @@ gulp.task('main_js', function(){
 
 gulp.task('watch', function() {
   gulp.watch('src/scss/**/*.scss', ['scss']);
-  gulp.watch('src/pug/**/*.pug', ['views']);
+  gulp.watch('src/views/**/*.pug', ['views']);
   gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/img/**/**', ['img']);
   gulp.watch('src/fonts/**/**', ['fonts']);
