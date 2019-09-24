@@ -1,0 +1,9 @@
+mixin dropdown(title, dropdownClass, positionClass)
+  .dropdown(class=dropdownClass)
+    .dropdown-toggle
+      .dropdown-toggle__text= title
+      .dropdown-toggle__arrow
+        .dropdown-toggle__arrow-icon
+
+    .dropdown-menu(class=positionClass)
+      block

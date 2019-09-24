@@ -1,1 +1,15 @@
-.navigation {}
+.navigation {
+  display: flex;
+  flex-direction: row;
+   &__item {
+     padding: 0 14px;
+   }
+}
+.dropdown-navigation {
+  .dropdown {
+    &-toggle {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+}

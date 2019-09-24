@@ -1,16 +1,14 @@
 .header {
-  height: 100px;
-  background: $secondary;
-  border-bottom: 10px solid $auxiliary;
+  padding: 21px 0 19px;
+  background: $body-background;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  @include respond-to(xxs) {
-    background: yellow;
+  &__main-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
   }
-  @include respond-range(sm, md) {
-    background: red;
-  }
-  @include respond-from(lg) {
-    background: brown;
-  }
-
 }

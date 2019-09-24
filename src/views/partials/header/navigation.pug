@@ -1,0 +1,15 @@
+include ../../components/dropdown
+- var navItemClass = "dropdown-navigation"
+
+nav.navigation
+  .navigation__item
+    +dropdown("new", navItemClass)
+  .navigation__item
+    +dropdown("designers", navItemClass)
+  .navigation__item
+    +dropdown("women", navItemClass)
+  .navigation__item
+    +dropdown("men", navItemClass)
+  .navigation__item
+    +dropdown("clearence", navItemClass)
+

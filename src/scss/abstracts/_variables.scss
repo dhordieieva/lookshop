@@ -8,7 +8,18 @@ $breakpoints: (
   //lg: 1200px,
 );
 
+// COLORS
 $color-salmon: #fd926d;
+
+// VARIABLES
+$base-font: 'Arial', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
+$body-font-size: 14px;
+$body-line-height: 1.2;
+$body-color: #727272;
+$body-background: #ffffff;
+
+$site-width: 970px;
 
 
 $secondary: $color-salmon;

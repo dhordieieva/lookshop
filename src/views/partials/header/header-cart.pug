@@ -1,0 +1,12 @@
+include ../../components/dropdown
+
+.header-cart
+  +dropdown('Your cart', 'dropdown-header-cart', 'right-top')
+    .cart-products-list
+      .cart-products-list__item
+  .header-cart-total
+    i.icon-cart
+    .header-cart-total-basket
+      span.total-items 0
+      |  item  |  $
+      span.total-coast 0
