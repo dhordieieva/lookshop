@@ -1,5 +1,15 @@
 .dropdown {
   position: relative;
+  &.open {
+    .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .dropdown-toggle__arrow-icon {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  }
 
   &-toggle {
     position: relative;
@@ -10,6 +20,7 @@
     line-height: 1.2;
     color: #000000;
     padding-right: 14px;
+    cursor: pointer;
 
     &__arrow {
       position: absolute;
@@ -31,10 +42,23 @@
   }
 
   &-menu {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
+    width: 100%;
+    min-width: 140px;
+    background: #ffffff;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #544f4d;
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform .3s ease, opacity .3s ease, visibility .3s ease;
+
 
     &.right-top {
       left: auto;

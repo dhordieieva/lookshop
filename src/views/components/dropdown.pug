@@ -1,6 +1,6 @@
 mixin dropdown(title, dropdownClass, positionClass)
   .dropdown(class=dropdownClass)
-    .dropdown-toggle
+    .dropdown-toggle(data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false")
       .dropdown-toggle__text= title
       .dropdown-toggle__arrow
         .dropdown-toggle__arrow-icon

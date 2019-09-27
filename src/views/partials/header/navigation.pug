@@ -1,15 +1,34 @@
 include ../../components/dropdown
-- var navItemClass = "dropdown-navigation"
+- var navItemClass = 'dropdown-navigation'
 
-nav.navigation
-  .navigation__item
-    +dropdown("new", navItemClass)
-  .navigation__item
-    +dropdown("designers", navItemClass)
-  .navigation__item
-    +dropdown("women", navItemClass)
-  .navigation__item
-    +dropdown("men", navItemClass)
-  .navigation__item
-    +dropdown("clearence", navItemClass)
 
+mixin cartProductsList(list)
+  ul.cart-products-list
+    each item in list
+      li.cart-products-list__item
+        a.cart-products-list__link(href="catalog.html")
+          span= item
+
+.navigation
+  .navigation__menu menu
+  .navigation-hamburger
+    .navigation-hamburger__item
+    .navigation-hamburger__item
+    .navigation-hamburger__item
+
+  nav.navigation-list
+    .navigation-list__item
+      +dropdown('new', navItemClass)
+        +cartProductsList(['coat', 'raincoats', 'jacket', 'hats', 'gloves'])
+    .navigation-list__item
+      +dropdown('designers', navItemClass)
+        +cartProductsList(['swimwear', 'skirts', 'suits', 'dresses'])
+    .navigation-list__item
+      +dropdown('women', navItemClass)
+        +cartProductsList(['pants', 'skirts', 'sweaters', 'blouses', 'dresses'])
+    .navigation-list__item
+      +dropdown('men', navItemClass)
+        +cartProductsList(['suit', 'shirts', 'sweaters', 'pants', 'shorts'])
+    .navigation-list__item
+      +dropdown('clearence', navItemClass)
+        +cartProductsList(['test text', 'test text', 'test text'])

@@ -73,9 +73,9 @@ body {
 
 .container {
   width: 100%;
-  padding: 0 10px;
+  padding: 0 $container-padding;
   margin: 0 auto;
-  max-width: $site-width + 20px;
+  max-width: $site-width + 2 * $container-padding;
 }
 
 //.wrapper {}

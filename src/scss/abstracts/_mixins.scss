@@ -1,6 +1,6 @@
 @mixin respond-from($from) {
   @if map-has-key($breakpoints, $from) {
-    @media (min-width: #{map-get($breakpoints, $from)}) {
+    @media (min-width: #{map-get($breakpoints, $from) + 1}) {
       @content;
     }
   }
@@ -13,7 +13,7 @@
 
 @mixin respond-to($to) {
   @if map-has-key($breakpoints, $to) {
-    @media (max-width: #{map-get($breakpoints, $to) - 1}) {
+    @media (max-width: #{map-get($breakpoints, $to)}) {
       @content;
     }
   }

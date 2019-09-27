@@ -1,4 +1,13 @@
 .logo {
-  display: block;
+  display: inline-block;
   padding-right: 10px;
+  height: 28px;
+  @include respond-to(xsm) {
+    margin: 0 auto 27px;
+    height: 44px;
+    padding-right: 0;
+  }
+  img {
+    height: 100%;
+  }
 }

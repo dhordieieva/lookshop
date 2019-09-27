@@ -1,15 +1,140 @@
 .navigation {
+  position: relative;
   display: flex;
-  flex-direction: row;
-   &__item {
-     padding: 0 14px;
-   }
+
+  @include respond-to(smd) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: $primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 17px;
+  }
+
+  &__menu {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 20px;
+
+    @include respond-from(smd) {
+      display: none;
+    }
+  }
+
+  &-hamburger {
+    width: 48px;
+    height: 48px;
+    padding: 14px 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &__item {
+      background: #ffffff;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+    }
+  }
+
+  .navigation-list {
+    display: flex;
+    @include respond-to(smd) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+      background: $primary;
+      border-radius: 0 0 6px 6px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: transform .4s ease, opacity .4s ease, visibility .4s ease;
+    }
+
+    &__item {
+      @include respond-from(smd) {
+        padding: 0 14px;
+        display: block;
+      }
+    }
+  }
+
+  &.open {
+    .navigation-list {
+      display: flex;
+      @include respond-to(smd){
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+  }
 }
+
+
 .dropdown-navigation {
+  &.open {
+    @include respond-to(smd) {
+      .dropdown-menu {
+        display: block;
+      }
+    }
+  }
+
   .dropdown {
     &-toggle {
       padding-top: 24px;
       padding-bottom: 24px;
+
+      @include respond-to(smd) {
+        padding: 10px 44px 10px 17px;
+        color: #ffffff;
+        font-size: 14px;
+        text-transform: uppercase;
+
+        &__arrow {
+          width: 44px;
+
+          &-icon {
+            border-top-color: #ffffff;
+          }
+        }
+      }
     }
+
+    &-menu {
+      top: 100%;
+      margin-top: -10px;
+
+      @include respond-to(xsm) {
+        transform: translateY(0);
+      }
+
+      @include respond-to(smd) {
+        display: none;
+        position: static;
+        margin-top: 0;
+        box-shadow: none;
+        border-radius: 0;
+        background: lighten($primary, 10%);
+        padding: 8px 17px;
+      }
+    }
+  }
+}
+
+.cart-products-list {
+  @include respond-to(smd) {
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
   }
 }
