@@ -1,0 +1,26 @@
+include ../components/dropdown
+
+.pre-header-wrap
+  .container
+    .pre-header
+      .pre-header__phone
+        span custom care:
+        a(href="tel:+888234567") 888-23-4567
+      .pre-header-list
+        .pre-header-list__item
+          +dropdown('$ US', 'dropdown-currency', 'right-top')
+            .dropdown-currency-list
+              .dropdown-currency-list__item UK
+              .dropdown-currency-list__item RU
+              .dropdown-currency-list__item US
+        .pre-header-list__item
+          a.pre-header-account(href="#")
+            i.icon-user
+            span My account
+        .pre-header-list__item
+          .pre-header-search
+            .pre-header-search__icon
+              i.icon-search
+            .pre-header-search__field
+              .pre-header-search__field-holder
+                input.pre-header-search__input(type="text", placeholder="Type ...")

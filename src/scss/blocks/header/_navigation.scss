@@ -2,6 +2,10 @@
   position: relative;
   display: flex;
 
+  @include respond-to(xsm) {
+    transform: translateY(-48px);
+  }
+
   @include respond-to(smd) {
     position: absolute;
     top: 100%;
@@ -44,6 +48,7 @@
 
   .navigation-list {
     display: flex;
+
     @include respond-to(smd) {
       position: absolute;
       top: 100%;

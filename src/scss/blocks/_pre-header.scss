@@ -1,0 +1,278 @@
+$phe-header-height: 36px;
+
+
+.pre-header-wrap {
+  background: #ffffff;
+  
+  @include respond-from(xsm) {
+    background: #000000;
+  }
+}
+
+.pre-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  margin: 0 -15px;
+
+  @include respond-from(xsm) {
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  &__phone {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 5px;
+    text-transform: uppercase;
+    background: #ffffff;
+    width: 100%;
+    text-align: center;
+    color: #838383;
+
+    @include respond-from(xsm) {
+      font-size: 11px;
+      line-height: 18px;
+      padding: 6px 0;
+      width: auto;
+      color: #ffffff;
+      background: #000000;
+      text-align: left;
+    }
+    span {
+      margin-right: 6px;
+    }
+    a {
+      color: #838383;
+      @include respond-from(xsm) {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #000000;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 30px;
+
+    @include respond-to(xxs) {
+      padding: 0 20px;
+    }
+
+    @include respond-from(xsm) {
+      width: auto;
+      padding: 0;
+    }
+
+    &__item {
+      border-left: 1px solid #444444;
+
+      &:last-child {
+        border-right: 1px solid #444444;
+      }
+
+      @include respond-to(xsm) {
+        &:first-child {
+          border-left: none;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-currency {
+  padding: 0 4px 0 0;
+  @include respond-from(xsm) {
+    padding: 0 4px 0 14px;
+  }
+
+  .dropdown {
+    &-toggle {
+      color: #ffffff;
+      font-size: 14px;
+      line-height: $phe-header-height;
+      padding-right: 28px;
+
+      @include respond-from(xsm) {
+        font-size: 11px;
+        line-height: 30px;
+      }
+
+      &__arrow {
+        color: #ffffff;
+        width: 28px;
+
+        &-icon {
+          border-top-color: #ffffff;
+        }
+      }
+    }
+
+    &-menu {
+      min-width: auto;
+      padding: 0;
+      border-radius: 0 0 4px 4px;
+    }
+  }
+}
+
+.dropdown-currency-list {
+  background: #000000;
+  padding: 3px 0;
+
+  &__item {
+    font-size: 11px;
+    text-align: center;
+    padding: 3px 4px;
+    cursor: pointer;
+    color: #ffffff;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.pre-header-account {
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: $phe-header-height;
+  padding: 0 33px;
+  color: #ffffff;
+
+  @include respond-to(xxs) {
+    padding: 0 10px;
+  }
+
+  @include respond-from(xsm) {
+    padding: 0 15px 0 14px;
+  }
+
+  &:hover span {
+    text-decoration: underline;
+  }
+
+  @include respond-from(xsm) {
+    font-size: 11px;
+    line-height: 30px;
+  }
+
+  .icon-user {
+    margin-right: 10px;
+    color: #666666;
+  }
+}
+
+.pre-header-search {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  
+  @include respond-from(xsm) {
+    min-height: auto;
+    min-width: auto;
+  }
+
+  &:hover {
+    .pre-header-search__icon .icon-search {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+  }
+
+  &.open {
+    .pre-header-search__field {
+      width: 200px;
+      @include respond-to(xsm) {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+    height: $phe-header-height;
+    width: 36px;
+
+    .icon-search {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: #ffffff;
+      font-size: 22px;
+      line-height: 26px;
+      transform: translate(-50%,-50%) rotate(90deg);
+      transition: transform .3s ease;
+    }
+
+    @include respond-from(xsm) {
+      line-height: 30px;
+    }
+  }
+
+  &__field {
+    width: 0;
+    overflow: hidden;
+    transition: width .3s ease;
+
+    @include respond-to(xsm) {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100% !important;
+      z-index: 2;
+      background: #000000;
+      border-top: 1px solid #444444;
+      transform: translateY(20px);
+      opacity: 0;
+      visibility: hidden;
+      transition: transform .3s ease, opacity .3s ease, visibility .3s ease;
+    }
+
+    &-holder {
+      padding: 5px 5px 5px 10px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 20px;
+    outline: none;
+    border: none;
+    font-size: 12px;
+    padding: 0 4px;
+
+    @include respond-to(xsm) {
+      background: #000000;
+      color: #ffffff;
+      height: 24px;
+    }
+
+    &::-webkit-input-placeholder {color: #000000;    font-size: 12px;}
+    &::-moz-placeholder          {color: #000000;    font-size: 12px;}
+    &:-moz-placeholder           {color: #000000;    font-size: 12px;}
+    &:-ms-input-placeholder      {color: #000000;    font-size: 12px;}
+
+    @include respond-to(xsm) {
+      &::-webkit-input-placeholder {color: #ffffff;    font-size: 12px;}
+      &::-moz-placeholder          {color: #ffffff;    font-size: 12px;}
+      &:-moz-placeholder           {color: #ffffff;    font-size: 12px;}
+      &:-ms-input-placeholder      {color: #ffffff;    font-size: 12px;}
+    }
+  }
+}
