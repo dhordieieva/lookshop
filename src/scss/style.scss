@@ -4,6 +4,8 @@
 //@import 'abstracts/functions';
 
 @import "vendor/normalize";
+@import "vendor/swiper";
+
 
 
 @import "base/fonts";
@@ -12,7 +14,7 @@
 
 @import "components/dropdown";
 //@import "components/forms";
-//@import "components/buttons";
+@import "components/buttons";
 //@import "components/tabs";
 //@import "components/checkboxes";
 //@import "components/switches";

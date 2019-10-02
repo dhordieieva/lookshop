@@ -1,44 +1,76 @@
 .btn {
   position: relative;
-  // display: block;
   display: inline-block;
-  padding: 12px 15px;
-  font-size: 16px;
-  min-width: 208px;
-  font-weight: 700;
-  line-height: 35px;
-  color: #696969;
+  padding: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  min-width: 120px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #ffffff;
   text-align: center;
-  background-color: #ffffff;
+  background-color: $primary;
   border: none;
-  border-radius: 30px;
+  border-bottom: 3px solid $secondary;
   vertical-align: middle;
   transform: translateZ(0);
   backface-visibility: hidden;
-  letter-spacing: 2px;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   cursor: pointer;
-  @include to768 {
-    padding: 8px 10px;
-  line-height: 32px;
+  transition: background .2s ease;
+  
+  &:hover {
+    background: $secondary;
+  }
 
-  }
-  &.wrap-icon {
-    font-size: 0;
-    span {font-size: 16px;}
-    svg {
-      font-size: 18px;
-      margin-right: 7px;
-    }
-  }
   span {
-    display: inline-block;
-    line-height: 25px;
+    position: relative;
+    top: 1px;
+  }
+
+  &--biggest {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 20px 10px 18px;
+    min-width: 157px;
+  }
+
+  &--big {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 15px 10px 14px;
+    min-width: 156px;
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &--small {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 5px 6px 6px;
+    border: 1px solid #000000;
+    min-width: 98px;
+  }
+
+  &--smallest {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 8px 5px 7px;
+    min-width: 98px;
+  }
+
+  &-square {
+    width: 28px;
+    height: 25px;
+    font-size: 11px;
+    line-height: 14px;
+  }
+
+  &-square--big {
+    width: 30px;
+    height: 30px;
   }
 }
-
-.btn.full {width: 100%;} 
-.btn.left  {float: left;} 
-.btn.right {float: right;}
-.btn.dib {display: inline-block;}

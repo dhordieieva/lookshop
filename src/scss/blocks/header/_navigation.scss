@@ -1,12 +1,12 @@
+$bp-mobele-nav: sm;
+
 .navigation {
   position: relative;
   display: flex;
+  z-index: 10;
 
-  @include respond-to(xsm) {
+  @include respond-to($bp-mobele-nav) {
     transform: translateY(-48px);
-  }
-
-  @include respond-to(smd) {
     position: absolute;
     top: 100%;
     left: 0;
@@ -24,7 +24,7 @@
     font-size: 18px;
     line-height: 20px;
 
-    @include respond-from(smd) {
+    @include respond-from($bp-mobele-nav) {
       display: none;
     }
   }
@@ -49,7 +49,7 @@
   .navigation-list {
     display: flex;
 
-    @include respond-to(smd) {
+    @include respond-to($bp-mobele-nav) {
       position: absolute;
       top: 100%;
       left: 0;
@@ -65,7 +65,7 @@
     }
 
     &__item {
-      @include respond-from(smd) {
+      @include respond-from($bp-mobele-nav) {
         padding: 0 14px;
         display: block;
       }
@@ -75,7 +75,7 @@
   &.open {
     .navigation-list {
       display: flex;
-      @include respond-to(smd){
+      @include respond-to($bp-mobele-nav) {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -87,7 +87,7 @@
 
 .dropdown-navigation {
   &.open {
-    @include respond-to(smd) {
+    @include respond-to($bp-mobele-nav) {
       .dropdown-menu {
         display: block;
       }
@@ -99,7 +99,7 @@
       padding-top: 24px;
       padding-bottom: 24px;
 
-      @include respond-to(smd) {
+      @include respond-to($bp-mobele-nav) {
         padding: 10px 44px 10px 17px;
         color: #ffffff;
         font-size: 14px;
@@ -123,7 +123,7 @@
         transform: translateY(0);
       }
 
-      @include respond-to(smd) {
+      @include respond-to($bp-mobele-nav) {
         display: none;
         position: static;
         margin-top: 0;
@@ -137,7 +137,7 @@
 }
 
 .cart-products-list {
-  @include respond-to(smd) {
+  @include respond-to($bp-mobele-nav) {
     font-size: 12px;
     line-height: 20px;
     text-transform: uppercase;

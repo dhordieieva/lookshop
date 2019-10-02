@@ -7,6 +7,8 @@
   @include respond-to(xsm) {
     flex-direction: column;
     justify-content: center;
+  }
+  @include respond-to(sm) {
     padding-bottom: 67px;
   }
   &-main-group {

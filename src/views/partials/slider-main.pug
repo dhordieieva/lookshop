@@ -1,0 +1,16 @@
+.main-slider-wrapper
+  .main-slider-wrapper__inner
+    .main-slider.swiper-container
+      .swiper-wrapper
+        - for (var i=1; i<=5; i++)
+          .main-slider-slide.swiper-slide
+            .main-slider-slide__img-wrapper
+              img.main-slider-slide__img(src="./images/temp/slide1.jpg")
+            a.btn.btn--biggest.btn--slide(href="#")
+              span Shop Now
+              .btn-slide__arrow
+      .main-slider__btn.main-slider__btn--next
+        i.icon-arr-right
+      .main-slider__btn.main-slider__btn--prev
+        i.icon-arr-left
+    .swiper-pagination.main-slider__pagination
