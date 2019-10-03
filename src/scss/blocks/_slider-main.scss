@@ -1,29 +1,21 @@
 .main-slider {
   position: relative;
-  margin-bottom: 40px;
-
-  @include respond-from(smd) {
-    margin-bottom: 60px;
-  }
+  margin-bottom: 55px;
 
   @include respond-from(md) {
     margin-bottom: 75px;
   }
 
   &-wrapper {
-    margin-top: 17px;
-    //background: -webkit-linear-gradient(left, #f6f3ec 19%,#e9e2d8 92%,#e9e2d8 92%,#e9e2d8 96%);
 
     @include respond-to(xsm) {
       display: none;
-    }
-    @include respond-from(sm) {
-      margin-top: 0;
     }
 
     &__inner {
       max-width: 1200px;
       margin: 0 auto;
+      position: relative;
     }
   }
 
@@ -86,11 +78,7 @@
       top: 100%;
       bottom: auto;
       width: 100%;
-      transform: translateY(15px);
-
-      @include respond-from(smd) {
-        transform: translateY(18px);
-      }
+      transform: translateY(22px);
 
       @include respond-from(md) {
         transform: translateY(32px);
@@ -135,18 +123,10 @@
   }
 
   span {
-    margin-right: 22px;
+
     @include respond-to(md) {
-      margin-right: 10px;
       font-size: 13px;
       line-height: 16px;
     }
   }
-}
-
-.btn-slide__arrow {
-  display: inline-block;
-  border-left: 4px solid #ffffff;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
 }

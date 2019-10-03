@@ -1,0 +1,65 @@
+.banner {
+  margin-bottom: 35px;
+
+  @include respond-from(sm) {
+    margin-bottom: 51px;
+  }
+
+  @include respond-to(xsm) {
+    display: none;
+  }
+
+  &-row {
+    width: 100%;
+    margin: 0 -1px 2px;
+  }
+
+  &-col {
+    float: left;
+    width: 50%;
+    padding: 0 1px;
+
+    &--full {
+      width: 100%;
+    }
+  }
+
+  &-image {
+    position: relative;
+    overflow: hidden;
+
+    &--big {
+      padding-bottom: 70.24%;
+    }
+
+    &--small {
+      padding-bottom: 70.12%;
+    }
+
+    &--wide {
+      padding-bottom: 34.91%;
+    }
+    
+    &__link {
+      display: block;
+    }
+
+    &__img {
+      @include center;
+      height: 100%;
+      max-width: initial;
+    }
+  }
+
+  .btn--small {
+    position: absolute;
+    bottom: 10.65%;
+    left: 12.44%;
+    background: #4fafa0;
+    border-bottom: none;
+    
+    &:hover {
+      background: #97d0c7;
+    }
+  }
+}

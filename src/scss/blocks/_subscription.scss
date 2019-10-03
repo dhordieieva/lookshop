@@ -1,0 +1,190 @@
+.subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+
+  @include respond-from(xsm) {
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 33px;
+  }
+
+  @include respond-from(sm) {
+    margin-bottom: 40px;
+  }
+
+  &-wrap {
+    background: #ffffff;
+
+    @include respond-from(xsm) {
+      background: #ededed;
+    }
+  }
+
+  &-email {
+    width: 100%;
+    margin-bottom: 12px;
+
+    @include respond-from(xsm) {
+      display: flex;
+      align-items: center;
+      width: initial;
+      margin-bottom: 0;
+    }
+
+    span {
+      display: none;
+
+      @include respond-from(xsm) {
+        display: block;
+        font-size: 12px;
+        line-height: 16px;
+        color: #6b6b6b;
+        margin-right: 10px;
+      }
+    }
+
+    .form {
+      position: relative;
+      width: 100%;
+
+      @include respond-from(xsm) {
+        width: initial;
+      }
+    }
+
+    &-input {
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 8px 48px 8px 15px;
+      height: 48px;
+      font-size: 15px;
+      line-height: 20px;
+      color: #9f9f9f;
+      background: #ededed;
+
+      @include respond-from(xsm) {
+        width: 132px;
+        height: 28px;
+        padding: 8px 6px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #6b6b6b;
+        background: #ffffff;
+      }
+
+      &::-webkit-input-placeholder {
+        color: #9f9f9f;
+        font-size: 15px;
+        line-height: 20px;
+        font-style: italic;
+      }
+      &::-moz-placeholder {
+        color: #9f9f9f;
+        font-size: 15px;
+        line-height: 20px;
+        font-style: italic;
+      }
+      &:-moz-placeholder {
+        color: #9f9f9f;
+        font-size: 15px;
+        line-height: 20px;
+        font-style: italic;
+      }
+      &:-ms-input-placeholder {
+        color: #9f9f9f;
+        font-size: 15px;
+        line-height: 20px;
+        font-style: italic;
+      }
+
+      @include respond-from(xsm) {
+        &::-webkit-input-placeholder {
+          font-size: 12px;
+          line-height: 16px;
+        }
+        &::-moz-placeholder {
+          font-size: 12px;
+          line-height: 16px;
+        }
+        &:-moz-placeholder {
+          font-size: 12px;
+          line-height: 16px;
+        }
+        &:-ms-input-placeholder {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    .btn-square {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 48px;
+      height: 48px;
+
+      @include respond-from(xsm) {
+        position: static;
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+
+  &-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #ffffff;
+
+    @include respond-from(xsm) {
+      background: initial;
+    }
+
+    span {
+      font-size: 13px;
+      line-height: 16px;
+      color: #6c6c6c;
+      margin-right: 17px;
+
+      @include respond-from(xsm) {
+        font-size: 12px;
+        margin-right: 14px;
+      }
+    }
+  }
+
+  .social-list {
+    display: flex;
+
+    &__item {
+      text-align: center;
+      padding: 12px 14px;
+      transition: color 0.2s ease;
+      background: #ededed;
+      font-size: 16px;
+      line-height: 20px;
+      color: #6c6c6c;
+
+      @include respond-from(xsm) {
+        background: initial;
+        padding: 15px 18px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      &:nth-child(odd) {
+        background: #f7f7f7;
+      }
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

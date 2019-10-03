@@ -4,18 +4,24 @@
   justify-content: space-between;
   padding: 21px 0 19px;
   background: $body-background;
+
+  @include respond-to(sm) {
+    padding-bottom: 67px;
+    margin-bottom: 17px;
+  }
+
   @include respond-to(xsm) {
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 12px;
   }
-  @include respond-to(sm) {
-    padding-bottom: 67px;
-  }
+
   &-main-group {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
+
     @include respond-to(xsm) {
       flex-direction: column;
       justify-content: center;
