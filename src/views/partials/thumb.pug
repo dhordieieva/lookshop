@@ -1,0 +1,12 @@
+mixin thumb(thumbName, price, imgUrl)
+  .thumb-wrapper
+    .thumb
+      a.thumb__preview.sale(href="product.html")
+        img.thumb-img(src=imgUrl)
+        .shop-it
+          i.icon-cart-add
+          span shop it
+      .thumb__info
+        .thumb__info-name= thumbName
+        .thumb__info-cost= price
+        a.btn(href="#") Add to cart

@@ -28,5 +28,63 @@ $(function(){
     },
   });
 
+  var offerHot = new Swiper('.offer-slider-hot', {
+    slidesOffsetBefore: 120,
+    slidesPerView: 5,
+    spaceBetween: 30,
+    centeredSlides: true,
+    speed: 300,
+    loop: true,
+    navigation: {
+      nextEl: '.offer-slider__btn--next-hot',
+      prevEl: '.offer-slider__btn--prev-hot',
+    },
+  });
+
+  var offerDesigners = new Swiper('.offer-slider-designers', {
+    slidesOffsetBefore: 120,
+    slidesPerView: 5,
+    spaceBetween: 30,
+    centeredSlides: true,
+    speed: 300,
+    loop: true,
+    navigation: {
+      nextEl: '.offer-slider__btn--next-designers',
+      prevEl: '.offer-slider__btn--prev-designers',
+    },
+  });
+
+  var offerFeatured = new Swiper('.offer-slider-featured', {
+    slidesOffsetBefore: 120,
+    slidesPerView: 5,
+    spaceBetween: 30,
+    centeredSlides: true,
+    speed: 300,
+    loop: true,
+    navigation: {
+      nextEl: '.offer-slider__btn--next-featured',
+      prevEl: '.offer-slider__btn--prev-featured',
+    },
+  });
+
+  var offerLatest = new Swiper('.offer-slider-latest', {
+    slidesOffsetBefore: 120,
+    slidesPerView: 5,
+    spaceBetween: 30,
+    centeredSlides: true,
+    speed: 300,
+    loop: true,
+    navigation: {
+      nextEl: '.offer-slider__btn--next-latest',
+      prevEl: '.offer-slider__btn--prev-latest',
+    },
+  });
+
+  $('.offers .nav-tabs__link').on('shown.bs.tab', function (e) {
+    offerHot.update();
+    offerDesigners.update();
+    offerFeatured.update();
+    offerLatest.update();
+  })
 
 });

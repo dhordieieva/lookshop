@@ -1,0 +1,99 @@
+include ./thumb
+
+.offers
+  // Nav tabs
+  .container
+    ul.nav.nav-tabs(role='tablist')
+      li.nav-tabs__item.active(role='presentation')
+        a.nav-tabs__link(href='#hot', aria-controls='hot', role='tab', data-toggle='tab') What’s hot?
+      li.nav-tabs__item(role='presentation')
+        a.nav-tabs__link(href='#designers', aria-controls='designers', role='tab', data-toggle='tab') Designers
+      li.nav-tabs__item(role='presentation')
+        a.nav-tabs__link(href='#featured', aria-controls='featured', role='tab', data-toggle='tab') Featured
+      li.nav-tabs__item(role='presentation')
+        a.nav-tabs__link(href='#latest', aria-controls='latest', role='tab', data-toggle='tab') Latest
+  // Tab panes
+
+  .offers__tab-contents
+    .tab-content
+      #hot.tab-pane.active(role='tabpanel')
+        .offer-slider-wrap
+          .container
+            .offer-slider-control-wrap
+              .offer-slider-control
+                .offer-slider__btn.offer-slider__btn--prev.offer-slider__btn--prev-hot
+                  i.icon-arr-left
+                .offer-slider__btn.offer-slider__btn--next.offer-slider__btn--next-hot
+                  i.icon-arr-right
+
+          .offer-slider.offer-slider-hot.swiper-container
+            .swiper-wrapper
+              - for (var i=1; i<=3; i++)
+                .offer-slider-slide.swiper-slide
+                  +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo1.jpg')
+                .offer-slider-slide.swiper-slide
+                  +thumb('HOT SHORTS', '$35.95', './images/temp/thumb/photo3.jpg')
+                .offer-slider-slide.swiper-slide
+                  +thumb('FEEL TANK', '$59.95', './images/temp/thumb/photo2.jpg')
+                .offer-slider-slide.swiper-slide
+                  +thumb('FEEL TANK', '$59.95', './images/temp/thumb/photo2.jpg')
+
+
+      #designers.tab-pane(role='tabpanel')
+        .offer-slider-wrap
+          .container
+            .offer-slider-control-wrap
+              .offer-slider-control
+                .offer-slider__btn.offer-slider__btn--prev.offer-slider__btn--prev-designers
+                  i.icon-arr-left
+                .offer-slider__btn.offer-slider__btn--next.offer-slider__btn--next-designers
+                  i.icon-arr-right
+          .offer-slider.offer-slider-designers.swiper-container
+            .swiper-wrapper
+              - for (var i=1; i<=3; i++)
+                .offer-slider-slide.swiper-slide
+                  +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo1.jpg')
+                .offer-slider-slide.swiper-slide
+                  +thumb('FEEL TANK', '$59.95', './images/temp/thumb/photo2.jpg')
+                .offer-slider-slide.swiper-slide
+                  +thumb('HOT SHORTS', '$35.95', './images/temp/thumb/photo3.jpg')
+                .offer-slider-slide.swiper-slide
+                  +thumb('HOT SHORTS', '$35.95', './images/temp/thumb/photo3.jpg')
+
+      #featured.tab-pane(role='tabpanel')
+        .offer-slider-wrap
+          .container
+            .offer-slider-control-wrap
+              .offer-slider-control
+                .offer-slider__btn.offer-slider__btn--prev.offer-slider__btn--prev-featured
+                  i.icon-arr-left
+                .offer-slider__btn.offer-slider__btn--next.offer-slider__btn--next-featured
+                  i.icon-arr-right
+          .offer-slider.offer-slider-featured.swiper-container
+            .swiper-wrapper
+              - for (var i=1; i<=3; i++)
+                .offer-slider-slide.swiper-slide
+                  +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo1.jpg')
+                .offer-slider-slide.swiper-slide
+                  +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo1.jpg')
+                .offer-slider-slide.swiper-slide
+                  +thumb('FEEL TANK', '$59.95', './images/temp/thumb/photo2.jpg')
+                .offer-slider-slide.swiper-slide
+                  +thumb('HOT SHORTS', '$35.95', './images/temp/thumb/photo3.jpg')
+
+      #latest.tab-pane(role='tabpanel')
+        .offer-slider-wrap
+          .container
+            .offer-slider-control-wrap
+              .offer-slider-control
+                .offer-slider__btn.offer-slider__btn--prev.offer-slider__btn--prev-latest
+                  i.icon-arr-left
+                .offer-slider__btn.offer-slider__btn--next.offer-slider__btn--next-latest
+                  i.icon-arr-right
+          .offer-slider.offer-slider-latest.swiper-container
+            .swiper-wrapper
+              - for (var i=1; i<=5; i++)
+              .offer-slider-slide.swiper-slide
+                +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo1.jpg')
+              .offer-slider-slide.swiper-slide
+                +thumb('FEEL TANK', '$59.95', './images/temp/thumb/photo2.jpg')
