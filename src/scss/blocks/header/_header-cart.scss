@@ -64,8 +64,10 @@
       }
     }
     &-menu {
+      padding-left: 0;
+      padding-right: 0;
       border: 1px solid #d6d6d6;
-      background: #fafafa;
+      background: #ffffff;
       min-width: auto;
       width: auto;
       right: -1px;
@@ -82,7 +84,9 @@
   }
 
   &__link {
+    cursor: pointer;
     color: #544f4d;
+
     @include respond-to(smd) {
       font-size: 12px;
       line-height: 20px;

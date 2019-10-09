@@ -116,6 +116,8 @@ $bp-mobele-nav: sm;
     }
 
     &-menu {
+      padding-left: 0;
+      padding-right: 0;
       top: 100%;
       margin-top: -10px;
 
@@ -141,5 +143,20 @@ $bp-mobele-nav: sm;
     font-size: 12px;
     line-height: 20px;
     text-transform: uppercase;
+  }
+
+  &__link {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #ffffff;
+    transition: color .3s ease, background .3s ease;
+
+    &:hover {
+      background: $primary;
+      color: #ffffff;
+    }
   }
 }

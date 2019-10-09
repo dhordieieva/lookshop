@@ -1,21 +1,142 @@
 .offers {
   &__tab-contents {
     background: $primary;
+    margin-bottom: 24px;
   }
 
   .tab-content {
     margin: 0 auto;
     max-width: 1200px;
   }
+
+  .nav-tab-mobile {
+    margin: 0 -15px;
+
+    &__dropdown {
+      background: darken(desaturate($primary, 10.01), 4.90);
+    }
+
+    &__menu {
+
+      @include respond-from(xsm) {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+    }
+
+
+    &__link {
+      display: block;
+      font-size: 15px;
+      line-height: 28px;
+      color: #ffffff;
+      text-transform: uppercase;
+
+      @include respond-from(xsm) {
+        padding: 14px 20px 13px;
+        background: #ffffff;
+        color: #555555;
+        line-height: 20px;
+      }
+
+    }
+    &__item {
+
+      @include respond-from(xsm) {
+        &.active .nav-tab-mobile__link{
+          background: $primary;
+          color: #ffffff;
+        }
+      }
+      &:hover .nav-tab-mobile__link {
+        background: rgba($primary, 0.7);
+        color: #ffffff;
+      }
+    }
+
+    .dropdown-toggle {
+      font-size: 15px;
+      line-height: 20px;
+      color: #ffffff;
+      text-transform: uppercase;
+      padding: 12px 30px 12px 14px;
+
+      @include respond-from(xsm) {
+        display: none;
+      }
+      
+      &__arrow {
+        right: 14px;
+
+        @include respond-from(xsm) {
+          display: none;
+        }
+
+        &-icon {
+          border: 5px solid transparent;
+          border-bottom: 0;
+          border-top-color: #ffffff;
+        }
+      }
+    }
+    
+    .dropdown-menu {
+      background: #f4845d;
+
+      @include respond-from(xsm) {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        background: #ffffff;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+
+  }
+
 }
 
 .offer {
+
   &-slider {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 15px;
+
+    @include respond-from (sm) {
+      padding: 30px 0;
+    }
+
+    &-wrap {
+
+      .btn--small {
+        display: block;
+        margin: 0 auto;
+        width: 110px;
+
+        @include respond-from(xsm) {
+          display: none;
+        }
+      }
+
+      .swiper-wrapper {
+
+        @include respond-to(xsm) {
+          margin-bottom: 15px;
+        }
+      }
+    }
 
     &-control-wrap {
-      position: relative;
+      display: none;
+
+      @include respond-from (xsm) {
+        position: relative;
+        display: block;
+      }
     }
 
     &-control {
@@ -27,39 +148,61 @@
     }
 
     &__btn {
-      //position: absolute;
-      //bottom: 100%;
-      color: #979797;
+      position: relative;
       background: #f2f2f2;
-      font-size: 27px;
       width: 47px;
       height: 47px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       cursor: pointer;
       transition: background .3s ease, color .3s ease;
 
-      &:hover {
-        background: $primary;
-        color: #ffffff;
-      }
-
-      &--next {
-        //right: 50%;
-        //transform: translate(485px, -30px);
+      &:after {
+        content: '';
+        display: block;
+        width: 13px;
+        height: 13px;
+        border-bottom: 1px solid #979797;
+        position: absolute;
+        top: 50%;
       }
 
       &--prev {
-        //right: 50%;
-        //transform: translate(438px, -30px);
+
+        &:after {
+          border-left: 1px solid #979797;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:hover {
+          &:after {
+            border-left: 1px solid #ffffff;
+          }
+        }
+      }
+
+      &--next {
+
+        &:after {
+          border-right: 1px solid #979797;
+          right: 25%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:hover {
+          &:after {
+            border-right: 1px solid #ffffff;
+          }
+        }
+      }
+
+      &:hover {
+        background: $primary;
+
+        &:after {
+          border-bottom: 1px solid #ffffff;
+        }
       }
     }
   }
-
-
-
-
-
 }
 

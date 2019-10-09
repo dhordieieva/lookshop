@@ -44,7 +44,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: 25px;
+      right: 10%;
     }
   }
 
@@ -61,10 +61,12 @@
 
   &--small {
     position: relative;
-    font-size: 12px;
-    line-height: 16px;
-    padding: 5px 20px 6px 6px ;
-    min-width: 98px;
+    min-width: 110px;
+    font-size: 10px;
+    line-height: 14px;
+    padding: 8px;
+    background: #000000;
+    border-bottom: none;
 
     &:after {
       content: "";
@@ -74,8 +76,15 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: 12px;
+      right: 10%;
     }
+  }
+
+  &--smalleer {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 5px 20px 6px 6px ;
+    min-width: 98px;
   }
 
   &--smallest {

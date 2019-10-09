@@ -1,0 +1,29 @@
+.catalog {
+  margin-bottom: 30px;
+
+  @include respond-from(sm) {
+    margin-bottom: 55px;
+  }
+  &-list {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+    &__item {
+      position: relative;
+      width: 25%;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .thumb {
+    position: relative;
+    .thumb__info {
+      background: #f7f7f7;
+    }
+  }
+}

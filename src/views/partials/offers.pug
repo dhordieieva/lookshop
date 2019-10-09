@@ -1,17 +1,32 @@
+include ../components/dropdown
 include ./thumb
+
 
 .offers
   // Nav tabs
   .container
-    ul.nav.nav-tabs(role='tablist')
-      li.nav-tabs__item.active(role='presentation')
-        a.nav-tabs__link(href='#hot', aria-controls='hot', role='tab', data-toggle='tab') What’s hot?
-      li.nav-tabs__item(role='presentation')
-        a.nav-tabs__link(href='#designers', aria-controls='designers', role='tab', data-toggle='tab') Designers
-      li.nav-tabs__item(role='presentation')
-        a.nav-tabs__link(href='#featured', aria-controls='featured', role='tab', data-toggle='tab') Featured
-      li.nav-tabs__item(role='presentation')
-        a.nav-tabs__link(href='#latest', aria-controls='latest', role='tab', data-toggle='tab') Latest
+    //ul.nav.nav-tabs(role='tablist')
+    //  li.nav-tabs__item.active(role='presentation')
+    //    a.nav-tabs__link(href='#hot', aria-controls='hot', role='tab', data-toggle='tab') What’s hot?
+    //  li.nav-tabs__item(role='presentation')
+    //    a.nav-tabs__link(href='#designers', aria-controls='designers', role='tab', data-toggle='tab') Designers
+    //  li.nav-tabs__item(role='presentation')
+    //    a.nav-tabs__link(href='#featured', aria-controls='featured', role='tab', data-toggle='tab') Featured
+    //  li.nav-tabs__item(role='presentation')
+    //    a.nav-tabs__link(href='#latest', aria-controls='latest', role='tab', data-toggle='tab') Latest
+
+    .nav.nav-tab-mobile(role='tablist')
+      +dropdown ('what’s hot?', 'nav-tab-mobile__dropdown')
+        ul.nav-tab-mobile__menu
+          li.nav-tab-mobile__item.active(role='presentation')
+            a.nav-tab-mobile__link(href='#hot', aria-controls='hot', role='tab', data-toggle='tab') What’s hot?
+          li.nav-tab-mobile__item(role='presentation')
+            a.nav-tab-mobile__link(href='#designers', aria-controls='designers', role='tab', data-toggle='tab') Designers
+          li.nav-tab-mobile__item(role='presentation')
+            a.nav-tab-mobile__link(href='#featured', aria-controls='featured', role='tab', data-toggle='tab') Featured
+          li.nav-tab-mobile__item(role='presentation')
+            a.nav-tab-mobile__link(href='#latest', aria-controls='latest', role='tab', data-toggle='tab') Latest
+
   // Tab panes
 
   .offers__tab-contents
@@ -22,9 +37,8 @@ include ./thumb
             .offer-slider-control-wrap
               .offer-slider-control
                 .offer-slider__btn.offer-slider__btn--prev.offer-slider__btn--prev-hot
-                  i.icon-arr-left
                 .offer-slider__btn.offer-slider__btn--next.offer-slider__btn--next-hot
-                  i.icon-arr-right
+
 
           .offer-slider.offer-slider-hot.swiper-container
             .swiper-wrapper
@@ -37,7 +51,7 @@ include ./thumb
                   +thumb('FEEL TANK', '$59.95', './images/temp/thumb/photo2.jpg')
                 .offer-slider-slide.swiper-slide
                   +thumb('FEEL TANK', '$59.95', './images/temp/thumb/photo2.jpg')
-
+            .btn.btn--small Load More
 
       #designers.tab-pane(role='tabpanel')
         .offer-slider-wrap
@@ -45,9 +59,7 @@ include ./thumb
             .offer-slider-control-wrap
               .offer-slider-control
                 .offer-slider__btn.offer-slider__btn--prev.offer-slider__btn--prev-designers
-                  i.icon-arr-left
                 .offer-slider__btn.offer-slider__btn--next.offer-slider__btn--next-designers
-                  i.icon-arr-right
           .offer-slider.offer-slider-designers.swiper-container
             .swiper-wrapper
               - for (var i=1; i<=3; i++)
@@ -59,6 +71,7 @@ include ./thumb
                   +thumb('HOT SHORTS', '$35.95', './images/temp/thumb/photo3.jpg')
                 .offer-slider-slide.swiper-slide
                   +thumb('HOT SHORTS', '$35.95', './images/temp/thumb/photo3.jpg')
+            .btn.btn--small Load More
 
       #featured.tab-pane(role='tabpanel')
         .offer-slider-wrap
@@ -66,9 +79,7 @@ include ./thumb
             .offer-slider-control-wrap
               .offer-slider-control
                 .offer-slider__btn.offer-slider__btn--prev.offer-slider__btn--prev-featured
-                  i.icon-arr-left
                 .offer-slider__btn.offer-slider__btn--next.offer-slider__btn--next-featured
-                  i.icon-arr-right
           .offer-slider.offer-slider-featured.swiper-container
             .swiper-wrapper
               - for (var i=1; i<=3; i++)
@@ -80,6 +91,7 @@ include ./thumb
                   +thumb('FEEL TANK', '$59.95', './images/temp/thumb/photo2.jpg')
                 .offer-slider-slide.swiper-slide
                   +thumb('HOT SHORTS', '$35.95', './images/temp/thumb/photo3.jpg')
+            .btn.btn--small Load More
 
       #latest.tab-pane(role='tabpanel')
         .offer-slider-wrap
@@ -87,9 +99,7 @@ include ./thumb
             .offer-slider-control-wrap
               .offer-slider-control
                 .offer-slider__btn.offer-slider__btn--prev.offer-slider__btn--prev-latest
-                  i.icon-arr-left
                 .offer-slider__btn.offer-slider__btn--next.offer-slider__btn--next-latest
-                  i.icon-arr-right
           .offer-slider.offer-slider-latest.swiper-container
             .swiper-wrapper
               - for (var i=1; i<=5; i++)
@@ -97,3 +107,4 @@ include ./thumb
                 +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo1.jpg')
               .offer-slider-slide.swiper-slide
                 +thumb('FEEL TANK', '$59.95', './images/temp/thumb/photo2.jpg')
+            .btn.btn--small Load More

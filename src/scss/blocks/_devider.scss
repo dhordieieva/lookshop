@@ -1,0 +1,38 @@
+.devider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -15px 25px;
+
+  @include respond-from(sm) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #d8d8d8;
+  }
+
+  &-img {
+    width: 120px;
+    height: auto;
+
+    @include respond-from (xsm) {
+      width: auto;
+    }
+
+    &-wrap {
+      background: #ffffff;
+      padding-left: 17px;
+      padding-right: 17px;
+      z-index: 2;
+    }
+  }
+}

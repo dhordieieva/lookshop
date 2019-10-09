@@ -91,11 +91,16 @@
         background: #867a76;
         opacity: 1;
         margin: 0 6px;
+        transition: background .3s ease;
 
         @include respond-from(smd) {
           width: 10px;
           height: 10px;
           margin: 0 10px;
+        }
+
+        &:hover {
+          background: $primary;
         }
 
         &-active {
