@@ -1,1 +1,66 @@
+mixin footerNavList(title, list)
+  .footer-navigation-title= title
+  .footer-nav-list
+    each el in list
+      a.footer-nav-list__item(href="#")= el
+
+.footer-navigation
+  .container
+    .footer-navigation__inner
+      .footer-navs
+        .footer-navigation-row
+          .footer-navigation-col
+            +footerNavList('Customer Service', ['Contact', 'FAQ', 'Terms of payment', 'Terms of sale', 'Delivery terms and conditions', 'Returns and Refunds'])
+
+          .footer-navigation-col
+            +footerNavList('Information', ['Affiliate', 'How to Shop', 'Cookies', 'About Nelly', 'Investor relations'])
+
+          .footer-navigation-col
+            +footerNavList('Campaigns', ['Evening dresses', 'Makeup', 'Fashion forward', 'Training clothes', 'Special Occasion Dresses'])
+
+          .footer-navigation-col
+            +footerNavList('Stores', ['Paris', 'New York', 'London', 'Madrid', 'Tokio'])
+
+      .footer-social
+        .footer-navigation-row
+          .footer-navigation-col
+            .footer-navigation-title Social
+            .footer-social-list
+              a.footer-social-list__item
+                i.icon-twitter.icon-footer
+              a.footer-social-list__item
+                i.icon-pinterest.icon-footer
+              a.footer-social-list__item
+                i.icon-fb.icon-footer
+              a.footer-social-list__item
+                i.icon-google-plus.icon-footer
+              a.footer-social-list__item
+                i.icon-tumblr.icon-footer
+              a.footer-social-list__item
+                i.icon-video.icon-footer
+
+          .footer-navigation-col
+            img.footer-social-img(src="./images/secured.png")
+
 footer.footer
+  .container
+    .footer__inner
+      .footer-menu
+        .footer-menu__item
+          a.footer-menu__link(href="#") Privacy & Cookies
+        .footer-menu__item |
+        .footer-menu__item
+          a.footer-menu__link(href="#") Terms & Conditions
+        .footer-menu__item |
+        .footer-menu__item
+          a.footer-menu__link(href="#") Accessibility
+        .footer-menu__item |
+        .footer-menu__item
+          a.footer-menu__link(href="#") Store Directory
+        .footer-menu__item |
+        .footer-menu__item
+          a.footer-menu__link(href="#") About Us
+
+      .footer-copyright
+        .footer-copyright__site © LookShop.com
+        .footer-copyright__text All Rights Reserved

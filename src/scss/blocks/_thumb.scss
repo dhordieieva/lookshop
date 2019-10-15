@@ -1,21 +1,15 @@
 .thumb {
   background: #ffffff;
   margin: 0 auto;
-  max-width: 240px;
 
   @include respond-from(xsm) {
     max-width: initial;
   }
 
-  &-wrapper {
-    //margin-right: 15px;
-    //margin-left: 15px;
-  }
-
   &__preview {
     display: block;
     position: relative;
-    padding-bottom: 131.81%;
+    padding-bottom: imageRatio(290, 220);
     cursor: pointer;
     overflow: hidden;
 

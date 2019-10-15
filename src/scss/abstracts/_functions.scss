@@ -1,0 +1,3 @@
+@function imageRatio($height, $width) {
+  @return $height / $width * 100%;
+}

@@ -1,0 +1,62 @@
+.thumb-row {
+  margin-bottom: 18px;
+
+  @include respond-from(sm) {
+    margin-bottom: 55px;
+  }
+  &-list {
+    margin: 0 -7px 15px;
+    display: flex;
+
+    @include respond-from(xsm) {
+      margin: 0 -15px;
+    }
+
+    &__item {
+      position: relative;
+      width: 50%;
+      padding: 0 7px;
+
+      @include respond-from(xsm) {
+        width:33.3333%;
+        padding: 0 15px;
+      }
+
+      @include respond-from(sm) {
+        width: 25%;
+      }
+
+      &:nth-child(4) {
+        display: block;
+
+        @include respond-to(sm) {
+          display: none;
+        }
+      }
+
+      &:nth-child(3) {
+        display: block;
+
+        @include respond-to(xsm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .thumb {
+    position: relative;
+    .thumb__info {
+      background: #f7f7f7;
+    }
+  }
+
+  .btn--small {
+    margin: 0 auto;
+    display: block;
+
+    @include respond-from(xsm) {
+      display: none;
+    }
+  }
+}

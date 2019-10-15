@@ -1,7 +1,7 @@
 /* Configuration and helpers */
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
-//@import 'abstracts/functions';
+@import 'abstracts/functions';
 
 @import "vendor/normalize";
 @import "vendor/swiper";
@@ -15,6 +15,7 @@
 @import "components/dropdown";
 //@import "components/forms";
 @import "components/buttons";
+@import "components/separator";
 //@import "components/tabs";
 //@import "components/checkboxes";
 //@import "components/switches";
@@ -29,10 +30,11 @@
 @import "blocks/offers";
 @import "components/tabs";
 @import "blocks/devider";
-@import "blocks/catalog";
+@import "blocks/thumbs-one-row";
 @import "blocks/brands";
-
-//@import "blocks/main/footer";
+@import "blocks/about-us";
+@import "blocks/cards";
+@import "blocks/footer";
 
 
 //@import "vendor/vendor1";

@@ -1,0 +1,36 @@
+.cards {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0;
+  background: #ffffff;
+
+  @include respond-from(xsm) {
+    display: flex;
+  }
+
+  @include respond-from(sm) {
+    background: #f7f7f7;
+  }
+
+  &-text {
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: 15px;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: row;
+    margin: 0 -5px;
+
+    &__item {
+      padding: 0 5px;
+
+      &-img {
+        width: 35px;
+        height: auto;
+      }
+    }
+  }
+}

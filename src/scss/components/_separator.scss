@@ -1,0 +1,24 @@
+.separator {
+  position: relative;
+  overflow: hidden;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: #d8d8d8;
+  }
+
+  &:before {
+    left: 50%;
+    margin-left: 94px;
+  }
+
+  &:after {
+    right: 50%;
+    margin-right: 94px;
+  }
+}
