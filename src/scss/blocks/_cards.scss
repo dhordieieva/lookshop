@@ -3,14 +3,10 @@
   justify-content: center;
   align-items: center;
   padding: 18px 0;
-  background: #ffffff;
+  background: #f7f7f7;
 
   @include respond-from(xsm) {
     display: flex;
-  }
-
-  @include respond-from(sm) {
-    background: #f7f7f7;
   }
 
   &-text {

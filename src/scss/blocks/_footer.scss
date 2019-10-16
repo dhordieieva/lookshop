@@ -2,11 +2,12 @@ $indent: 20px;
 $indent-mobile: 15px;
 
 .footer-navigation {
+  background: #ededed;
   padding-bottom: 5px;
+  padding-top: 30px;
 
   @include respond-from(smd) {
-    background: #ededed;
-    padding: 30px 0;
+    padding-bottom: 30px;
   }
 
   @include respond-to(xsm) {
@@ -134,17 +135,22 @@ $indent-mobile: 15px;
 
 
 .footer {
-  background: #ffffff;
-  padding: 21px 0;
+  position: relative;
+  background: #000000;
+  padding: 11px 0px;
 
-  @include respond-from(smd) {
-    background: #000000;
+  @include respond-from(xsm) {
+    padding: 21px 0;
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include respond-from(xsm) {
+      justify-content: space-between;
+    }
   }
 
   .footer-copyright {
@@ -158,22 +164,106 @@ $indent-mobile: 15px;
   }
 
   &-menu {
+    position: absolute;
     display: flex;
+    bottom: 100%;
+    left: 0;
+    width: 80%;
+    padding: 10px 0;
+    background: #000000;
+    flex-direction: column;
+    border-radius: 4px 4px 0 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-70%);
+    transition: opacity .5s ease, visibility .5s, transform .5s ease;
+
+
+    @include respond-from(xsm) {
+      position: static;
+      background: initial;
+      flex-direction: row;
+      width: auto;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      padding: 0;
+    }
 
     &__item {
-      font-size: 11px;
-      line-height: 14px;
-      color: #8d8d8d;
-      padding: 0 4px;
+      font-size: 14px;
+      line-height: 24px;
+      padding: 0 9px;
       cursor: pointer;
+
+      @include respond-from(xsm) {
+        font-size: 11px;
+        line-height: 14px;
+
+        border-right: 1px solid #555555;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
     }
 
     &__link {
-      color: #8d8d8d;
+      color: #f4f4f4;
       transition: color .3s ease;
 
-      &:hover {
-        color: #ffffff;
+      @include respond-from(xsm) {
+        color: #8d8d8d;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  &.open .footer-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  &-humburger {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    @include respond-from(xsm) {
+      display: none;
+    }
+
+    &__element {
+      background: #ffffff;
+      width: 100%;
+      height: 5px;
+      border-radius: 2px;
+
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: #ffffff;
+        border-radius: 2px;
+      }
+
+      &:before {
+        top: 0;
+      }
+
+      &:after {
+        bottom: 0;
       }
     }
   }

@@ -13,6 +13,22 @@ $(function() {
     $parent.toggleClass('open');
   });
 
+
+
+
+
+  $('.footer-for-js').on('click', function (event) {
+    var $this = $(event.currentTarget);
+    var $nav = $this.parent();
+
+    $nav.toggleClass('open');
+  });
+
+
+
+
+
+
   var swiper = new Swiper('.main-slider', {
     slidesPerView: 1,
     spaceBetween: 0,

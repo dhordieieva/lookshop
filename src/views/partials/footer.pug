@@ -43,24 +43,23 @@ mixin footerNavList(title, list)
             img.footer-social-img(src="./images/secured.png")
 
 footer.footer
-  .container
-    .footer__inner
-      .footer-menu
-        .footer-menu__item
-          a.footer-menu__link(href="#") Privacy & Cookies
-        .footer-menu__item |
-        .footer-menu__item
-          a.footer-menu__link(href="#") Terms & Conditions
-        .footer-menu__item |
-        .footer-menu__item
-          a.footer-menu__link(href="#") Accessibility
-        .footer-menu__item |
-        .footer-menu__item
-          a.footer-menu__link(href="#") Store Directory
-        .footer-menu__item |
-        .footer-menu__item
-          a.footer-menu__link(href="#") About Us
+  .footer-for-js
+    .container
+      .footer__inner
+        .footer-humburger
+          .footer-humburger__element
+        .footer-menu
+          .footer-menu__item
+            a.footer-menu__link(href="#") Privacy & Cookies
+          .footer-menu__item
+            a.footer-menu__link(href="#") Terms & Conditions
+          .footer-menu__item
+            a.footer-menu__link(href="#") Accessibility
+          .footer-menu__item
+            a.footer-menu__link(href="#") Store Directory
+          .footer-menu__item
+            a.footer-menu__link(href="#") About Us
 
-      .footer-copyright
-        .footer-copyright__site © LookShop.com
-        .footer-copyright__text All Rights Reserved
+        .footer-copyright
+          .footer-copyright__site © LookShop.com
+          .footer-copyright__text All Rights Reserved
