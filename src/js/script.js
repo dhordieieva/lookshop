@@ -14,19 +14,12 @@ $(function() {
   });
 
 
-
-
-
-  $('.footer-for-js').on('click', function (event) {
+  $('.footer-humburger').on('click', function (event) {
     var $this = $(event.currentTarget);
     var $nav = $this.parent();
-
+    $this.toggleClass('open');
     $nav.toggleClass('open');
   });
-
-
-
-
 
 
   var swiper = new Swiper('.main-slider', {
@@ -108,6 +101,28 @@ $(function() {
   $('.nav-tab-mobile__link').on('click', function (event) {
     var $this = $(event.currentTarget);
     $('.nav-tab-mobile__dropdown').find('.dropdown-toggle__text').text($this.text());
+  });
+
+  var galleryThumbs = new Swiper('.product-gallery-thumbs', {
+    spaceBetween: 13,
+    slidesPerView: 4,
+    // loop: true,
+    freeMode: true,
+    loopedSlides: 5, //looped slides should be the same
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+  var galleryTop = new Swiper('.product-gallery-big', {
+    spaceBetween: 10,
+    // loop:true,
+    loopedSlides: 5, //looped slides should be the same
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    }
   });
 
 });

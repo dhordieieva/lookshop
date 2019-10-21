@@ -6,6 +6,7 @@
   line-height: 16px;
   min-width: 120px;
   font-weight: 300;
+  font-family: $secondary-font;
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
@@ -51,7 +52,7 @@
   &--big {
     font-size: 14px;
     line-height: 18px;
-    padding: 15px 10px 14px;
+    padding: 15px 19px 14px;
     min-width: 156px;
   }
 
@@ -100,10 +101,5 @@
     height: 28px;
     font-size: 11px;
     line-height: 14px;
-  }
-
-  &-square--big {
-    width: 30px;
-    height: 30px;
   }
 }

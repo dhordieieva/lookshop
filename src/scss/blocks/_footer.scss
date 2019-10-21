@@ -177,7 +177,7 @@ $indent-mobile: 15px;
     visibility: hidden;
     transform: translateX(-70%);
     transition: opacity .5s ease, visibility .5s, transform .5s ease;
-
+    z-index: 3;
 
     @include respond-from(xsm) {
       position: static;
@@ -222,7 +222,7 @@ $indent-mobile: 15px;
     }
   }
 
-  &.open .footer-menu {
+  &-dropdown.open .footer-menu {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);

@@ -1,0 +1,9 @@
+mixin colorRadio(colorId, bg)
+  .color-radio
+    input.color-radio__input(type="radio", name="color", id="color-radio-" + colorId)
+    label.color-radio__label(for="color-radio-" + colorId, style="background: " + bg)
+
+mixin colorsRadio(colors)
+  .color-radio-group
+    each item in colors
+      +colorRadio(item[0], item[1])

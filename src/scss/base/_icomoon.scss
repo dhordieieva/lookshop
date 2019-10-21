@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-minus:before {
+  content: "\e913";
+}
 .icon-arr-right:before {
   content: "\e900";
 }
@@ -82,3 +85,4 @@
 .icon-video:before {
   content: "\e90d";
 }
+

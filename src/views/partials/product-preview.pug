@@ -1,0 +1,79 @@
+include ../components/color-radio
+
+mixin productSizeList(list)
+  ul.product-size-list
+    each item in list
+      li.product-size-list__item
+        span= item
+
+.product-wrap
+  .container
+    .product
+      .product-col.product-col--images
+        .swiper-container.product-gallery-big
+          .swiper-wrapper
+            .swiper-slide.product-gallery-big__slide
+              img.product-gallery-big__img(src="./images/dress-new.jpg")
+            .swiper-slide.product-gallery-big__slide
+              img.product-gallery-big__img(src="./images/dress.jpg")
+            .swiper-slide.product-gallery-big__slide
+              img.product-gallery-big__img(src="./images/dress-pink.jpg")
+            .swiper-slide.product-gallery-big__slide
+              img.product-gallery-big__img(src="./images/dress-back.jpg")
+            .swiper-slide.product-gallery-big__slide
+              img.product-gallery-big__img(src="./images/dress.jpg")
+            .swiper-slide.product-gallery-big__slide
+              img.product-gallery-big__img(src="./images/dress-new.jpg")
+
+          .swiper-button-next.swiper-button-white
+          .swiper-button-prev.swiper-button-white
+
+
+        .swiper-container.product-gallery-thumbs
+          .swiper-wrapper.swiper-wrapper-product-thumbs
+            .swiper-slide.product-gallery-thumbs__slide
+              img.product-gallery-thumbs__img(src="./images/dress-new.jpg")
+            .swiper-slide.product-gallery-thumbs__slide
+              img.product-gallery-thumbs__img(src="./images/dress.jpg")
+            .swiper-slide.product-gallery-thumbs__slide
+              img.product-gallery-thumbs__img(src="./images/dress-pink.jpg")
+            .swiper-slide.product-gallery-thumbs__slide
+              img.product-gallery-thumbs__img(src="./images/dress-back.jpg")
+            .swiper-slide.product-gallery-thumbs__slide
+              img.product-gallery-thumbs__img(src="./images/dress.jpg")
+            .swiper-slide.product-gallery-thumbs__slide
+              img.product-gallery-thumbs__img(src="./images/dress-new.jpg")
+
+
+      .product-col.product-col--info
+        .product-back-wrap
+          a.product-back(href="women-clothing.hmml")
+            i.icon-arr-left.product-back__icon
+            span.product-back__text Back to
+            span.product-back__text-mark Women’s Clothing
+        .product-name Sofi Dress
+        .product-price-rewievs-wrap
+          .product-price $98.95
+          .product-rewievs
+            a.product-rewievs__text 12 reviews
+            .product-rewievs__progress-bar
+              .progress-bar__inside(style="width:100%")
+              .progress-bar__fill(style="width:70%")
+        .product-about-product This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+        form(action="#")
+          .product-details
+            .product-details__size
+
+            .product-details__color
+              +colorsRadio([['yellow', '#efebe2'], ['gray', '#c9c1c6'], ['brown', '#b29b88'], ['terracotta', '#968886'], ['blue', '#cde0ef']])
+          .product-buttons
+            .product-quantity
+              .btn.btn-square.product-quantity__btn
+                i.icon-minus
+              input(type="number", max="50", min="1", value="1").product-quantity__input
+              .btn.btn-square.product-quantity__btn
+                i.icon-plus
+
+            button(type="submit").btn.btn--big
+              span Add to card
+              i.icon-plus

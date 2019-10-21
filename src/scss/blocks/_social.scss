@@ -1,0 +1,94 @@
+.social-block {
+  margin: 0 auto;
+  max-width: 775px;
+
+  &-wrap {
+    margin-bottom: 20px;
+
+    @include respond-from(xsm) {
+      margin-bottom: 37px;
+    }
+  }
+
+  &-inner {
+    padding: 21px 0 0;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+
+    @include respond-from(xsm) {
+      padding: 21px 0;
+    }
+  }
+
+  &-row {
+    margin: 0 -10px;
+  }
+
+  &-col {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    float: left;
+    padding: 0 10px 21px;
+
+    @include respond-from (xsm) {
+      width: 25%;
+      padding: 0 15px;
+      justify-content: center;
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+
+      &:hover .social-block-item__icon,
+      &:hover .social-block-item__text {
+        color: $primary;
+        border-color: $primary;
+      }
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 34px;
+      height: 34px;
+      font-size: 16px;
+      line-height: 20px;
+      color: #b8a9a4;
+      border: 2px solid #b8a9a4;
+      border-radius: 50%;
+      margin-right: 7px;
+      transition: color .3s ease, border-color .3s ease;
+
+      @include respond-from(xsm) {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      @include respond-from (sm) {
+        width: 49px;
+        height: 49px;
+        font-size: 20px;
+      }
+    }
+
+    &__text {
+      font-size: 10px;
+      line-height: 12px;
+      color: #4d4d4d;
+      text-transform: uppercase;
+      transition: color .3s ease;
+
+      @include respond-from (xs) {
+        font-size: 11px;
+        line-height: 14px;
+      }
+    }
+  }
+}

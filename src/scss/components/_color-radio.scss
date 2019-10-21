@@ -1,0 +1,28 @@
+.color-radio {
+  margin-right: 1px;
+
+  &-group {
+    display: flex;
+    flex-direction: row;
+    margin-right: -1px;
+  }
+
+  &__input {
+    display: none;
+    &:checked + .color-radio__label {
+      outline: 1px solid #000000;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    @include respond-from(xsm) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
