@@ -57,8 +57,7 @@ mixin productSizeList(list)
           .product-rewievs
             a.product-rewievs__text 12 reviews
             .product-rewievs__progress-bar
-              .progress-bar__inside(style="width:100%")
-              .progress-bar__fill(style="width:70%")
+              .progress-bar__filling(style="width:70%")
         .product-about-product This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
         form(action="#")
           .product-details
@@ -67,11 +66,11 @@ mixin productSizeList(list)
             .product-details__color
               +colorsRadio([['yellow', '#efebe2'], ['gray', '#c9c1c6'], ['brown', '#b29b88'], ['terracotta', '#968886'], ['blue', '#cde0ef']])
           .product-buttons
-            .product-quantity
-              .btn.btn-square.product-quantity__btn
+            .product-quantity.js-counter
+              .btn.btn-square.product-quantity__btn.js-counterbtn-down
                 i.icon-minus
-              input(type="number", max="50", min="1", value="1").product-quantity__input
-              .btn.btn-square.product-quantity__btn
+              input.product-quantity__input.js-counter-inp(type="number", max="50", min="1", value="1", readonly)
+              .btn.btn-square.product-quantity__btn.js-counterbtn-up
                 i.icon-plus
 
             button(type="submit").btn.btn--big

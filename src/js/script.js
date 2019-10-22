@@ -13,14 +13,34 @@ $(function() {
     $parent.toggleClass('open');
   });
 
-
-  $('.footer-humburger').on('click', function (event) {
+  $('.footer-hamburger').on('click', function (event) {
     var $this = $(event.currentTarget);
-    var $nav = $this.parent();
+    var $parent = $this.parent();
     $this.toggleClass('open');
-    $nav.toggleClass('open');
+    $parent.toggleClass('open');
   });
 
+  $(document).on('click', function (e) {
+    var div = $('.footer-hamburger');
+    if (!div.is(e.target)
+      && div.has(e.target).length === 0) {
+
+      div.removeClass('open').parent().removeClass('open');
+    }
+  });
+
+
+  $('.js-counter .js-counterbtn-up').on('click', function (ev) {
+    var $this = $(ev.currentTarget);
+    var input = $this.parent('.js-counter').find('.js-counter-inp')[0];
+    input.stepUp();
+  });
+
+  $('.js-counter .js-counterbtn-down').on('click', function (ev) {
+    var $this = $(ev.currentTarget);
+    var input = $this.parent('.js-counter').find('.js-counter-inp')[0];
+    input.stepDown();
+  });
 
   var swiper = new Swiper('.main-slider', {
     slidesPerView: 1,

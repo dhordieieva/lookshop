@@ -139,6 +139,7 @@ $bp-mobele-nav: sm;
 }
 
 .cart-products-list {
+
   @include respond-to($bp-mobele-nav) {
     font-size: 12px;
     line-height: 20px;
@@ -149,14 +150,19 @@ $bp-mobele-nav: sm;
     display: block;
     font-size: 14px;
     line-height: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background: #ffffff;
     transition: color .3s ease, background .3s ease;
 
-    &:hover {
-      background: $primary;
-      color: #ffffff;
+    @include respond-from(sm) {
+      font-size: 14px;
+      line-height: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background: #ffffff;
+
+      &:hover {
+        background: $primary;
+        color: #ffffff;
+      }
     }
   }
 }

@@ -34,19 +34,8 @@
     position: relative;
     font-size: 16px;
     line-height: 18px;
-    padding: 18px 33px 18px 10px;
+    padding: 18px 33px;
     min-width: 157px;
-
-    &:after {
-      content: "";
-      border-left: 4px solid #ffffff;
-      border-top: 4px solid transparent;
-      border-bottom: 4px solid transparent;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 10%;
-    }
   }
 
   &--big {
@@ -68,17 +57,6 @@
     padding: 8px;
     background: #000000;
     border-bottom: none;
-
-    &:after {
-      content: "";
-      border-left: 4px solid #ffffff;
-      border-top: 4px solid transparent;
-      border-bottom: 4px solid transparent;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 10%;
-    }
   }
 
   &--smalleer {
@@ -101,5 +79,32 @@
     height: 28px;
     font-size: 11px;
     line-height: 14px;
+
+    &.btn--big {
+      min-width: 36px;
+      width: 36px;
+      height: 36px;
+    }
+
+    &.btn--small {
+      min-width: 36px;
+      width: 36px;
+      height: 36px;
+    }
+    &--smallest {}
+  }
+
+  &--with- {
+    padding-left: 33px;
+    &:after {
+      content: "";
+      border-left: 4px solid #ffffff;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10%;
+    }
   }
 }

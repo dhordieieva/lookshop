@@ -47,7 +47,6 @@
   }
 }
 
-
 .dropdown-header-cart {
   @include respond-to(xsm) {
     display: none;
@@ -56,13 +55,16 @@
     &-toggle {
       color: #949393;
       padding: 9px 30px 9px 10px;
+
       &__arrow {
         width: 30px;
+
         &-icon {
           border-top-color: #c1c1c1;
         }
       }
     }
+
     &-menu {
       padding-left: 0;
       padding-right: 0;

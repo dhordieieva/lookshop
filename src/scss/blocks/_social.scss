@@ -1,6 +1,10 @@
 .social-block {
   margin: 0 auto;
-  max-width: 775px;
+  max-width: 350px;
+
+  @include respond-from(xsm) {
+    max-width: 775px;
+  }
 
   &-wrap {
     margin-bottom: 20px;
@@ -21,7 +25,10 @@
   }
 
   &-row {
-    margin: 0 -10px;
+
+    @include respond-from(xsm) {
+      margin: 0 -10px;
+    }
   }
 
   &-col {

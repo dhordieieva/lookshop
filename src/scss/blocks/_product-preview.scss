@@ -8,13 +8,14 @@
 
 
 .product {
-  margin: 0 -15px;
 
   @include respond-to(xsm) {
-    padding-top: 40px;
+    padding-top: 50px;
     position: relative;
   }
+
   @include respond-from(xsm) {
+    margin: 0 -15px;
     display: flex;
   }
 
@@ -56,40 +57,61 @@
     }
 
     &__img {
-      width: 100%;
+
+      @include respond-to(xsm) {
+        max-width: 400px;
+      }
     }
   }
 
+  &-gallery-thumbs {
+    max-width: 400px;
+  }
+
   &-back {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
+    position: relative;
+    display: block;
     font-size: 12px;
     line-height: 14px;
-    align-items: center;
     cursor: pointer;
-    padding: 7px 0;
-    margin-bottom: 7px;
+    padding: 7px 0 7px 15px;
 
     @include respond-from(xsm) {
-      position: static;
       line-height: 18px;
-      margin-bottom: 15px;
-      transform: translateX(0);
-      border-bottom: 1px solid #d6d6d6;
-      padding: 11px 0;
+      padding: 12px 0 12px 15px;
+    }
+
+    &:hover .product-back__text-mark {
+      display: inline;
+      color: $primary;
     }
 
     &-wrap {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom: 1px solid #d6d6d6;
+      margin-bottom: 7px;
 
+      @include respond-from(xsm) {
+        position: static;
+        transform: translateX(0);
+        margin-bottom: 15px;
+      }
     }
 
     &__icon {
+      position: absolute;
+      top: 8px;
+      left: 0;
       color: #cccccc;
       font-weight: 700;
-      margin-right: 8px;
+
+      @include respond-from(xsm) {
+        top: 15px;
+      }
     }
 
     &__text {
@@ -101,12 +123,6 @@
         transition: color .3s ease;
       }
     }
-
-    &:hover .product-way__text-mark {
-      display: inline;
-      color: $primary;
-    }
-
   }
 
   &-name {
@@ -166,17 +182,12 @@
       position: relative;
       height: 9px;
       width: 50px;
+      background: url("../images/bg-progress-inside.jpg") repeat-x;
+      z-index: 1;
     }
   }
 
-  .progress-bar__inside {
-    position: relative;
-    height: 100%;
-    background: url("../images/bg-progress-inside.jpg") repeat-x;
-    z-index: 1;
-  }
-
-  .progress-bar__fill {
+  .progress-bar__filling {
     position: absolute;
     top: 0;
     left: 0;
@@ -287,13 +298,7 @@
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
-      //margin: 0;
     }
-  }
-
-  &-details__color {
-
-
   }
 }
 
