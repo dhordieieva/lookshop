@@ -67,11 +67,10 @@ mixin productSizeList(list)
               +colorsRadio([['yellow', '#efebe2'], ['gray', '#c9c1c6'], ['brown', '#b29b88'], ['terracotta', '#968886'], ['blue', '#cde0ef']])
           .product-buttons
             .product-quantity.js-counter
-              .btn.btn-square.product-quantity__btn.js-counterbtn-down
-                i.icon-minus
+              .btn.btn-square.btn--biggest.js-counterbtn-down -
               input.product-quantity__input.js-counter-inp(type="number", max="50", min="1", value="1", readonly)
-              .btn.btn-square.product-quantity__btn.js-counterbtn-up
-                i.icon-plus
+              .btn.btn-square.btn--biggest.js-counterbtn-up +
+
 
             button(type="submit").btn.btn--big
               span Add to card

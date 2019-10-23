@@ -113,18 +113,20 @@
 
 .btn--slide {
   position: absolute;
-  left: 22.83%;
-  bottom: 18.40%;
+  left: 20.83%;
+  bottom: 16.40%;
   z-index: 5;
+  padding: 6px;
+  min-width: 120px;
 
-  @include respond-to(lg) {
-    padding: 15px;
-    min-width: 140px;
+  @include respond-from(sm) {
+    left: 22.83%;
+    bottom: 18.40%;
   }
 
-  @include respond-to(md) {
-    padding: 6px;
-    min-width: 120px;
+  @include respond-from(md) {
+    padding: 15px;
+    min-width: 140px;
   }
 
   span {

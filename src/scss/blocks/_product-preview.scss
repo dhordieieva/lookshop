@@ -230,13 +230,6 @@
     padding: 9px 14px 8px;
     min-width: 120px;
 
-    @include respond-from(sm) {
-      font-size: 14px;
-      line-height: 18px;
-      padding: 15px 19px 14px;
-      min-width: 156px;
-    }
-
     span {
       margin-right: 16px;
     }
@@ -264,18 +257,7 @@
     display: flex;
     margin-right: 5px;
 
-    &__btn {
-      width: 36px;
-      height: 36px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      @include respond-from(sm) {
-        width: 48px;
-        height: 50px;
-      }
-    }
+    &__btn {}
 
     &__input {
       text-align: center;
@@ -290,7 +272,7 @@
       border: none;
 
       @include respond-from(sm) {
-        width: 48px;
+        width: 47px;
         height: 50px;
         padding: 17px 10px;
       }

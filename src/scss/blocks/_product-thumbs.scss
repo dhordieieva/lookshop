@@ -1,13 +1,22 @@
 .product-thumbs {
   text-align: center;
-  margin-bottom: 42px;
+  margin-bottom: 15px;
+
+  @include respond-from(xsm) {
+    margin-bottom: 42px;
+  }
 
   &-title {
-  display: block;
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #414141;
+    display: block;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #414141;
+    margin-bottom: 20px;
+
+    @include respond-from(xsm) {
+      margin-bottom: 30px;
+    }
   }
 }

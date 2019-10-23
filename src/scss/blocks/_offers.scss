@@ -205,3 +205,12 @@
   }
 }
 
+.btn-offer {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include respond-from(xsm) {
+    display: none;
+  }
+}

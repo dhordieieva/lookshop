@@ -1,10 +1,10 @@
 .btn {
   position: relative;
   display: inline-block;
-  padding: 8px;
-  font-size: 12px;
-  line-height: 16px;
-  min-width: 120px;
+  padding: 7px 12px 4px;
+  font-size: 11px;
+  line-height: 14px;
+  min-width: 110px;
   font-weight: 300;
   font-family: $secondary-font;
   text-transform: uppercase;
@@ -14,12 +14,16 @@
   border: none;
   border-bottom: 3px solid $secondary;
   vertical-align: middle;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   cursor: pointer;
   transition: background .2s ease;
+
+  @include respond-from(xsm) {
+    padding: 8px 14px 5px;
+    font-size: 12px;
+    line-height: 16px;
+    min-width: 120px;
+  }
   
   &:hover {
     background: $secondary;
@@ -30,19 +34,29 @@
     top: 1px;
   }
 
-  &--biggest {
-    position: relative;
-    font-size: 16px;
-    line-height: 18px;
-    padding: 18px 33px;
-    min-width: 157px;
+  i {
+    top: 1px;
   }
 
   &--big {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 10px 14px 7px;
+    min-width: 120px;
+
+    @include respond-from (sm) {
+      font-size: 14px;
+      line-height: 18px;
+      padding: 16px 19px 13px;
+      min-width: 156px;
+    }
+  }
+
+  &--biggest {
+    font-size: 16px;
     line-height: 18px;
-    padding: 15px 19px 14px;
-    min-width: 156px;
+    padding: 17px 14px 16;
+    min-width: 157px;
   }
 
   &--full {
@@ -50,26 +64,23 @@
   }
 
   &--small {
-    position: relative;
-    width: 110px;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 14px;
-    padding: 8px;
-    background: #000000;
-    border-bottom: none;
+    padding: 7px 7px 6px;
+    min-width: 230px;
   }
 
   &--smalleer {
     font-size: 12px;
     line-height: 16px;
-    padding: 5px 20px 6px 6px ;
-    min-width: 98px;
+    padding: 7px 14px 4px;
+    min-width: 110px;
   }
 
   &--smallest {
     font-size: 12px;
     line-height: 16px;
-    padding: 8px 5px 7px;
+    padding: 6px 14px 4px;
     min-width: 98px;
   }
 
@@ -79,6 +90,7 @@
     height: 28px;
     font-size: 11px;
     line-height: 14px;
+    padding: 7px;
 
     &.btn--big {
       min-width: 36px;
@@ -86,16 +98,43 @@
       height: 36px;
     }
 
-    &.btn--small {
-      min-width: 36px;
+    &.btn--biggest {
       width: 36px;
       height: 36px;
+      padding: 10px 7px;
+      font-size: 14px;
+      line-height: 16px;
+
+      @include respond-from(sm) {
+        font-size: 16px;
+        line-height: 18px;
+        padding: 17px 10px 16px;
+        min-width: 47px;
+        width: 47px;
+        height: 50px;
+      }
     }
-    &--smallest {}
+
+    &.btn--small {
+      min-width: 24px;
+      width: 24px;
+      height: 24px;
+      line-height: 12px;
+      padding: 6px;
+    }
+
+    &--smallest {
+      min-width: 20px;
+      width: 20px;
+      height: 20px;
+      line-height: 12px;
+      padding: 4px;
+    }
   }
 
-  &--with- {
-    padding-left: 33px;
+  &--with-arr {
+    padding-right: 33px;
+
     &:after {
       content: "";
       border-left: 4px solid #ffffff;
@@ -106,5 +145,25 @@
       transform: translateY(-50%);
       right: 10%;
     }
+  }
+
+  &.btn-black {
+    background: #000000;
+
+    &:hover {
+      background: #3e3333;
+    }
+  }
+
+  &.btn-green {
+    background: #4fafa0;
+
+    &:hover {
+      background: #97d0c7;
+    }
+  }
+
+  &.btn-without-border-botttom {
+    border-bottom: none;
   }
 }

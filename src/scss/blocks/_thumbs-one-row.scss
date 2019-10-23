@@ -51,9 +51,8 @@
     }
   }
 
-  .btn--small {
-    margin: 0 auto;
-    display: block;
+  .btn-thumb-wrap {
+    text-align: center;
 
     @include respond-from(xsm) {
       display: none;

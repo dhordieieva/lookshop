@@ -51,15 +51,16 @@
     }
   }
 
-  .btn--small {
+  .btn-banner {
     position: absolute;
-    bottom: 10.65%;
-    left: 12.44%;
-    background: #4fafa0;
-    border-bottom: none;
-    
-    &:hover {
-      background: #97d0c7;
+    bottom: 0;
+    right: 0;
+    min-width: 98px;
+
+    @include respond-from(smd) {
+      bottom: 10.65%;
+      left: 12.30%;
+      right: auto;
     }
   }
 }
