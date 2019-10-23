@@ -6,6 +6,15 @@ $(function() {
     $nav.toggleClass('open');
   });
 
+  $(document).on('click', function (e) {
+    var div = $('.navigation-hamburger');
+    if (!div.is(e.target)
+      && div.has(e.target).length === 0) {
+
+      div.removeClass('open').parent().removeClass('open');
+    }
+  });
+
   $('.pre-header-search__icon').on('click', function (event) {
     var $this = $(event.currentTarget);
     var $parent = $this.parent();

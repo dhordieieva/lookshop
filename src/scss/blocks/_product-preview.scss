@@ -57,15 +57,15 @@
     }
 
     &__img {
-
-      @include respond-to(xsm) {
-        max-width: 400px;
-      }
+      width: 100%;
     }
   }
 
   &-gallery-thumbs {
-    max-width: 400px;
+
+    @include respond-to(xsm) {
+      max-width: 400px;
+    }
   }
 
   &-back {
@@ -253,6 +253,7 @@
   &-buttons {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     @include respond-from(xs) {
       justify-content: flex-start;

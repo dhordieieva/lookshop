@@ -137,6 +137,7 @@ $indent-mobile: 15px;
 .footer {
   position: relative;
   background: #000000;
+  padding: 9px 0;
 
   @include respond-from(xsm) {
     padding: 21px 0;
@@ -228,23 +229,41 @@ $indent-mobile: 15px;
   }
 
   &-hamburger {
-    width: 52px;
-    height: 52px;
+    width: 36px;
+    height: 36px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
-    padding: 11px;
+    padding: 10px;
 
     @include respond-from(xsm) {
       display: none;
     }
 
     &__element {
+      position: relative;
       background: #ffffff;
       width: 100%;
-      height: 5px;
+      height: 3px;
       border-radius: 2px;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+      }
+
+      &:before {
+        top: -6px;
+      }
+
+      &:after {
+        bottom: -6px;
+      }
     }
   }
 }
