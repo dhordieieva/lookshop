@@ -16,6 +16,7 @@
     line-height: 16px;
     color: #ffffff;
     text-transform: uppercase;
+    background: $primary;
 
     @include respond-from(sm) {
       padding: 20px 18px;
@@ -57,21 +58,22 @@
   }
 }
 
-.primary--light {
+.accordion--light {
   background: lighten(saturate(#fd926d, 2.70), 17.84);
 }
 
-.primary--really-light  {
+.accordion--medium-light  {
   background: lighten(saturate(#fd926d, 2.70), 15.10);
 }
-.primary--medium {
+
+.accordion--medium {
   background: lighten(saturate(#fd926d, 2.70), 7.65);
 }
 
-.primary--medium-light {
+.accordion--medium-strong {
   background: lighten(saturate(#fd926d, 2.70), 5.49);
 }
 
-.primary {
+.accordion--primary {
   background: $primary;
 }
