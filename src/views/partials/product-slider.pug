@@ -1,0 +1,27 @@
+mixin productSlide(imageUrl, slideName, slidePrice)
+  .product-slide.swiper-slide
+    .product-slide__preview
+      img.product-slide__preview-img(src=imageUrl)
+    .product-slide__description
+      .product-name.product-slide-name= slideName
+      .product-price.product-slide-price= slidePrice
+      .product-text.product-slide-text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+      .btn.btn--big
+        span Add to card
+        i.icon-plus
+
+.product-slider-wrap
+  .container
+    .product-slider-inner.bordered-section
+      .product-slider.swiper-container
+        .swiper-wrapper
+          +productSlide('./images/product-slide.jpg', 'Open Heart Top', '$13.95')
+          +productSlide('./images/pink-dress.png', 'Light Bluz', '$18.00')
+          +productSlide('./images/bluz-sl.png', 'Light Bluz', '$11.25')
+
+      .product-slider__btn.product-slider__btn--next
+        i.icon-arr-right
+      .product-slider__btn.product-slider__btn--prev
+        i.icon-arr-left
+
+    .swiper-pagination.product-slider__pagination

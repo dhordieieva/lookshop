@@ -12,7 +12,7 @@
   text-align: center;
   background-color: $primary;
   border: none;
-  border-bottom: 3px solid $secondary;
+  border-bottom: 3px solid $auxiliary;
   vertical-align: middle;
   overflow: hidden;
   cursor: pointer;
@@ -26,7 +26,7 @@
   }
   
   &:hover {
-    background: $secondary;
+    background: $auxiliary;
   }
 
   span {
@@ -40,11 +40,18 @@
 
   &--big {
     font-size: 12px;
-    line-height: 16px;
-    padding: 10px 14px 7px;
-    min-width: 120px;
+    line-height: 14px;
+    padding: 8px 10px 5px;
+    min-width: 100px;
 
-    @include respond-from (sm) {
+    @include respond-from (xs) {
+      font-size: 12px;
+      line-height: 16px;
+      padding: 10px 14px 7px;
+      min-width: 120px;
+    }
+
+    @include respond-from (md) {
       font-size: 14px;
       line-height: 18px;
       padding: 16px 19px 13px;
@@ -147,7 +154,7 @@
     }
   }
 
-  &.btn-black {
+  &.btn-dark {
     background: #000000;
 
     &:hover {
@@ -155,11 +162,11 @@
     }
   }
 
-  &.btn-green {
-    background: #4fafa0;
+  &.btn-secondary-color {
+    background: $secondary;
 
     &:hover {
-      background: #97d0c7;
+      background: lighten(desaturate(#4fafa0, 0.05), 20.59);
     }
   }
 

@@ -66,6 +66,23 @@ $(function() {
     },
   });
 
+
+  var swiper = new Swiper('.product-slider', {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    speed: 1000,
+    loop: true,
+    pagination: {
+      el: '.product-slider__pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.product-slider__btn--next',
+      prevEl: '.product-slider__btn--prev',
+    },
+  });
+
+
   function generateOfferSlider(sliderClass, btnPrevClass, btnNextClass) {
     return new Swiper(sliderClass, {
       slidesPerView: 2,

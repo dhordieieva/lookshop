@@ -1,0 +1,195 @@
+.product {
+
+  &-slider {
+
+    &-wrap {
+      position: relative;
+      padding-bottom: 24px;
+      margin-bottom: 15px;
+
+      @include respond-from(xsm) {
+        padding-bottom: 30px;
+        margin-bottom: 24px;
+      }
+
+      @include respond-from(smd) {
+        margin-bottom: 27px;
+      }
+
+      .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: #867a76;
+        margin: 0 4px;
+        transition: background .3s ease, opacity .3s ease;
+
+        @include respond-from(xsm) {
+          width: 10px;
+          height: 10px;
+          margin: 0 6px
+        }
+
+        @include respond-from(smd) {
+          margin: 0 10px;
+        }
+
+        &:hover {
+          opacity: 1;
+          background: $primary;
+        }
+      }
+
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: $primary;
+      }
+    }
+
+    &-inner {
+      position: relative;
+      padding: 17px 5.1546% 0;
+    }
+
+    &__btn {
+      position: absolute;
+      top: 25%;
+      width: 22px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      z-index: 2;
+      font-size: 22px;
+      color: #cccccc;
+      cursor: pointer;
+      transition: color .3s ease;
+
+      @include respond-from(sm) {
+        top: 50%;
+        font-size: 25px;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 37px;
+      }
+
+      &--next {
+        right: 0;
+
+        @include respond-from(sm) {
+          right: 0;
+        }
+      }
+
+      &--prev {
+        left: 0;
+
+        @include respond-from(sm) {
+          left: 0;
+        }
+      }
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    &__pagination {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+  }
+
+  &-slide {
+    position: relative;
+
+    &__preview {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      @include respond-from(sm) {
+        width: 60%;
+      }
+    }
+
+    &__description {
+      position: static;
+      width: 100%;
+      padding: 15px 0;
+      text-align: center;
+
+      @include respond-from(xsm) {
+        text-align: left;
+      }
+
+      @include respond-from(sm) {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 40%;
+        padding: 17px 0 0 20px;
+        transform: translateY(-50%);
+      }
+    }
+
+    &-name {
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 10px;
+
+      @include respond-from (smd) {
+        font-size: 22px;
+        line-height: 24px;
+      }
+
+      @include respond-from (md) {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 18px;
+      }
+  }
+
+    &-price {
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 22px;
+
+      @include respond-from (smd) {
+        font-size: 26px;
+        line-height: 30px;
+      }
+
+      @include respond-from (md) {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+
+    &-text {
+      display: none;
+
+      @include respond-from(xsm) {
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      @include respond-from (md) {
+        margin-bottom: 27px;
+      }
+    }
+  }
+
+  .btn--big {
+
+    .icon-plus {
+      font-size: 11px;
+
+      @include respond-from(xsm) {
+        font-size: 12px;
+      }
+    }
+  }
+}
