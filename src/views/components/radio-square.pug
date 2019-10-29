@@ -1,0 +1,6 @@
+mixin radioSquare(textId, radioName, radioText)
+  .radio-square
+    .radio-square-group
+      input.radio-square__input(type="radio", name= radioName, id="radio-square" + textId)
+      label.radio-square__label(for="radio-square" + textId)
+        span= radioText

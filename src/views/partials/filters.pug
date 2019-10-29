@@ -1,4 +1,4 @@
-include ../components/size-radio
+include ../components/radio-square
 include ../components/inputs
 
 form
@@ -11,11 +11,11 @@ form
             i.icon-plus
             i.icon-minus
         #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
-          .filter-accordion-list
-            a.filter-accordion-list__item Pants / Skirts
-            a.filter-accordion-list__item Blouses / T-shirts
-            a.filter-accordion-list__item Cardigans/ Sweaters
-
+          +checkbox('pants', 'pants', 'Pants')
+          +checkbox('blouses', 'blouses', 'Blouses')
+          +checkbox('skirts', 'skirts', 'Skirts')
+          +checkbox('sweaters', 'sweaters', 'Sweaters')
+          +checkbox('cardigans', 'cardigans', 'Cardigans')
 
       .filter-group__item
         #headingTwo(role='tab')
@@ -24,10 +24,10 @@ form
             i.icon-plus
             i.icon-minus
         #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
-          .filter-accordion-list
-            a.filter-accordion-list__item Pants / Skirts
-            a.filter-accordion-list__item Blouses / T-shirts
-            a.filter-accordion-list__item Cardigans/ Sweaters
+          +checkbox('armani', 'armani', 'Armani')
+          +checkbox('versace', 'versace', 'Versace')
+          +checkbox('gucci', 'gucci', 'Gucci')
+          +checkbox('prada', 'prada', 'Prada')
 
       .filter-group__item
         #headingThree(role='tab')
@@ -37,11 +37,7 @@ form
             i.icon-minus
         #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
           +checkbox('femaleClothes', 'femaleClothes', 'Clothes')
-          +checkbox('femaleClothes2', 'femaleClothes2', 'Clothes')
-
-          +radio('radio1', 'radio-group', 'Yes', true)
-          +radio('radio2', 'radio-group', 'No')
-          +radio('radio3', 'radio-group', 'Maybe')
+          +checkbox('femaleShoes', 'femaleShoes', 'Shoes')
 
       .filter-group__item
         #headingFour(role='tab')
@@ -50,10 +46,8 @@ form
             i.icon-plus
             i.icon-minus
         #collapseFour.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFour')
-          u.filter-accordion-list
-            a.filter-accordion-list__item Pants / shorts
-            a.filter-accordion-list__item shirts / T-shirts
-            a.filter-accordion-list__item Cardigans/ Sweaters
+          +checkbox('maleClothes', 'maleClothes', 'Clothes')
+          +checkbox('maleShoes', 'maleShoes', 'Shoes')
 
       .filter-group__item
         #headingFive(role='tab')
@@ -62,14 +56,15 @@ form
             i.icon-plus
             i.icon-minus
         #collapseFive.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFive')
-          u.filter-accordion-list
-            a.filter-accordion-list__item Pants / shorts
-            a.filter-accordion-list__item shirts / T-shirts
-            a.filter-accordion-list__item Cardigans/ Sweaters
+          +radio('yes', 'yes', 'Yes', 'checked')
+          +radio('no', 'no', 'No')
+          +radio('maybe', 'maybe', 'Maybe')
 
     .filter-size
-      +sizeRadio('xs', 'XS')
-      +sizeRadio('s', 'S')
-      +sizeRadio('m', 'M')
-      +sizeRadio('l', 'L')
-      +sizeRadio('xl', 'XL')
+      .filter-size__text Select your size
+      .filter-size__radio-list
+        +radioSquare('xs', 'size', 'XS')
+        +radioSquare('s', 'size', 'S')
+        +radioSquare('m', 'size', 'M')
+        +radioSquare('l', 'size', 'L')
+        +radioSquare('xl', 'size', 'XL')

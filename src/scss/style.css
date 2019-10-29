@@ -1250,29 +1250,10 @@ body {
         width: 30px;
         height: 30px; } }
 
-.size-radio {
-  margin-right: 1px; }
-  .size-radio-group {
-    margin-right: 6px; }
-  .size-radio__input {
-    display: none; }
-    .size-radio__input:checked + .size-radio__label {
-      background: #fd926d;
-      color: #ffffff; }
-  .size-radio__label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    font-size: 11px;
-    line-height: 14px;
-    color: #4d4d4d;
-    background: #f4f4f4;
-    cursor: pointer; }
-
 .filter-group {
   margin-bottom: 30px; }
+.filter .panel-collapse {
+  padding: 8px 10px; }
 .filter-accordion {
   display: flex;
   align-items: center;
@@ -1286,8 +1267,6 @@ body {
   position: relative;
   border-bottom: 1px solid #d6d6d6;
   transition: color .3s ease; }
-  .filter-accordion:hover span {
-    text-decoration: underline; }
   .filter-accordion.collapsed {
     color: #727272; }
   .filter-accordion .icon-plus {
@@ -1315,9 +1294,15 @@ body {
       cursor: pointer;
       text-decoration: none; }
       .filter-accordion-list__item:hover {
-        color: #000000;
-        text-decoration: underline; }
-.filter-size {
+        color: #000000; }
+.filter-size__text {
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #5e5e5e;
+  margin-bottom: 10px;
+  user-select: none; }
+.filter-size__radio-list {
   display: flex; }
 
 .pagination-block {
@@ -1410,12 +1395,12 @@ span.pagination--btn:hover {
     margin-top: 5px; }
   .wrap-fcustominp .fcustominp-label {
     float: left;
-    font-size: 18px;
-    line-height: 26px;
-    color: #222222;
+    font-size: 11px;
+    line-height: 16px;
+    color: #333333;
     cursor: pointer;
-    transition: color .3s;
-    margin-left: 9px; }
+    transition: color .3s ease;
+    margin-left: 5px; }
   .wrap-fcustominp .fcustominp-label-block {
     border: 1px solid #cccccc;
     background: #f8f8f8;
@@ -1428,54 +1413,62 @@ span.pagination--btn:hover {
       background: #dd6b44;
       border-color: #dd6b44; }
       .wrap-fcustominp .fcustominp-label-block:hover .fcustominp-label, .wrap-fcustominp .fcustominp-label-block.active .fcustominp-label {
-        color: #fff; }
+        color: #ffffff; }
 
 .fcustominp {
-  float: left;
-  overflow: hidden;
-  width: 28px;
-  height: 26px;
-  padding: 0 1px;
-  flex: 0 0 28px; }
+  /*Make it a small rectangle so the border will create an L-shape*/
+  /*Add a white border on the bottom and left, creating that 'L' */
+  /*Rotate the L 45 degrees to turn it into a checkmark*/ }
   .fcustominp input {
     display: none; }
   .fcustominp label {
     position: relative;
     display: block;
-    width: 100%;
-    height: 100%;
-    background: #f5f5f5;
-    border: 1px solid #dcdcdc;
-    cursor: pointer;
-    border-radius: 2px;
-    transform: translateZ(0); }
-  .fcustominp input[type=checkbox]:checked + label:after {
+    width: 8px;
+    height: 8px;
+    background: #fd926d;
+    border: 1px solid transparent;
+    cursor: pointer; }
+  .fcustominp input[type=checkbox]:checked + label {
+    border-color: #000000; }
+  .fcustominp input[type=radio] + label {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fd926d; }
+  .fcustominp input[type=radio] + label:after {
+    display: none; }
+  .fcustominp input[type=radio]:checked + label:after {
     content: '';
     display: block;
     position: absolute;
-    top: 2px;
-    left: 6px;
-    /*Make it a small rectangle so the border will create an L-shape*/
-    width: 8px;
-    height: 12px;
-    /*Add a white border on the bottom and left, creating that 'L' */
-    border: solid #4fafa0;
-    border-width: 0 3px 3px 0;
-    /*Rotate the L 45 degrees to turn it into a checkmark*/
-    transform: rotate(45deg); }
-  .fcustominp input[type=radio] + label {
     border-radius: 50%;
-    background: #f5f5f5; }
-  .fcustominp input[type=radio]:checked + label:after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    top: 7px;
-    left: 7px;
-    width: 10px;
-    height: 10px;
-    background: #4fafa0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    background: #000000;
     z-index: 1; }
+
+.radio-square-group {
+  margin-right: 6px; }
+.radio-square__input {
+  display: none; }
+  .radio-square__input:checked + .radio-square__label {
+    background: #fd926d;
+    color: #ffffff; }
+.radio-square__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 11px;
+  line-height: 14px;
+  color: #4d4d4d;
+  background: #f4f4f4;
+  cursor: pointer; }
 
 .pre-header-wrap {
   background: #ffffff; }

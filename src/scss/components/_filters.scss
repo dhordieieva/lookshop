@@ -4,6 +4,10 @@
     margin-bottom: 30px;
   }
 
+  .panel-collapse {
+    padding: 8px 10px;
+  }
+
   &-accordion {
     display: flex;
     align-items: center;
@@ -17,10 +21,6 @@
     position: relative;
     border-bottom: $border;
     transition: color .3s ease;
-
-    &:hover span {
-      text-decoration: underline;
-    }
 
     &.collapsed {
       color: #727272;
@@ -62,7 +62,6 @@
 
         &:hover {
           color: #000000;
-          text-decoration: underline;
         }
       }
     }
@@ -70,6 +69,19 @@
   }
 
   &-size {
-    display: flex;
+
+    &__text {
+      font-size: 12px;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: #5e5e5e;
+      margin-bottom: 10px;
+      user-select: none;
+    }
+
+    &__radio-list {
+      display: flex;
+    }
   }
+
 }

@@ -1,5 +1,4 @@
-.size-radio {
-  margin-right: 1px;
+.radio-square {
 
   &-group {
     margin-right: 6px;
@@ -8,7 +7,7 @@
   &__input {
     display: none;
 
-    &:checked + .size-radio__label {
+    &:checked + .radio-square__label {
       background: $primary;
       color: #ffffff;
     }
