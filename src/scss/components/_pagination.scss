@@ -1,0 +1,39 @@
+.pagination {
+  &-block {
+    display: flex;
+    align-items: center;
+
+    &__text {
+      font-size: 11px;
+      line-height: 14px;
+      color: #4d4d4d;
+      margin-right: 13px;
+    }
+  }
+
+  &--btn {
+    color: #4d4d4d;
+    background: #f4f4f4;
+    margin-left: 4px;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    transition: background .3s ease;
+    user-select: none;
+
+    &:hover {
+      background: #e5e5e5;
+    }
+
+    &.active {
+      background: $primary;
+      color: #ffffff;
+    }
+  }
+}
+
+span.pagination--btn,
+span.pagination--btn:hover {
+  background: transparent;
+  cursor: default;
+}

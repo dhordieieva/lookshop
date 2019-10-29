@@ -14,7 +14,9 @@
     height: 13px;
     margin-right: 5px;
     float: left;
-    input { display: none; }
+    input {
+      display: none;
+    }
     input + label {
       display: block;
       width: 100%;
@@ -51,7 +53,7 @@
       }
     }
     input:checked + label {
-      background: $secondary;
+      background: $auxiliary;
       span {display: none;}
       &:after {
         transform: translateX(17px);
@@ -97,8 +99,8 @@
       transition: border .3s, background .3s;
       &:hover,
       &.active {
-        background: $secondary;
-        border-color: $secondary;
+        background: $auxiliary;
+        border-color: $auxiliary;
         .fcustominp-label {color: #fff;}
       }
     }
@@ -147,7 +149,7 @@
       content: '';
       position: absolute;
       
-      background: $select-check-radio;
+      //background: $select-check-radio;
       border-radius: 50%;
       top: 7px; left: 7px;
       width: 10px; height: 10px;

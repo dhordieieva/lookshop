@@ -1,0 +1,29 @@
+.size-radio {
+  margin-right: 1px;
+
+  &-group {
+    margin-right: 6px;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .size-radio__label {
+      background: $primary;
+      color: #ffffff;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+    line-height: 14px;
+    color: #4d4d4d;
+    background: #f4f4f4;
+    cursor: pointer;
+  }
+}

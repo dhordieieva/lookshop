@@ -1,0 +1,75 @@
+include ../components/size-radio
+include ../components/inputs
+
+form
+  .filter
+    #filter-accordion.filter-group(role='tablist', aria-multiselectable='true')
+      .filter-group__item
+        #headingOne(role='tab')
+          a.filter-accordion(role='button', data-toggle='collapse', data-parent='#filter-accordion', href='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
+            span New
+            i.icon-plus
+            i.icon-minus
+        #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+          .filter-accordion-list
+            a.filter-accordion-list__item Pants / Skirts
+            a.filter-accordion-list__item Blouses / T-shirts
+            a.filter-accordion-list__item Cardigans/ Sweaters
+
+
+      .filter-group__item
+        #headingTwo(role='tab')
+          a.filter-accordion.collapsed(role='button', data-toggle='collapse', data-parent='#filter-accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+            span Designers
+            i.icon-plus
+            i.icon-minus
+        #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+          .filter-accordion-list
+            a.filter-accordion-list__item Pants / Skirts
+            a.filter-accordion-list__item Blouses / T-shirts
+            a.filter-accordion-list__item Cardigans/ Sweaters
+
+      .filter-group__item
+        #headingThree(role='tab')
+          a.filter-accordion.collapsed(role='button', data-toggle='collapse', data-parent='#filter-accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+            span Women
+            i.icon-plus
+            i.icon-minus
+        #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+          +checkbox('femaleClothes', 'femaleClothes', 'Clothes')
+          +checkbox('femaleClothes2', 'femaleClothes2', 'Clothes')
+
+          +radio('radio1', 'radio-group', 'Yes', true)
+          +radio('radio2', 'radio-group', 'No')
+          +radio('radio3', 'radio-group', 'Maybe')
+
+      .filter-group__item
+        #headingFour(role='tab')
+          a.filter-accordion.collapsed(role='button', data-toggle='collapse', data-parent='#filter-accordion', href='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+            span Men
+            i.icon-plus
+            i.icon-minus
+        #collapseFour.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFour')
+          u.filter-accordion-list
+            a.filter-accordion-list__item Pants / shorts
+            a.filter-accordion-list__item shirts / T-shirts
+            a.filter-accordion-list__item Cardigans/ Sweaters
+
+      .filter-group__item
+        #headingFive(role='tab')
+          a.filter-accordion.collapsed(role='button', data-toggle='collapse', data-parent='#filter-accordion', href='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
+            span Clearance
+            i.icon-plus
+            i.icon-minus
+        #collapseFive.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFive')
+          u.filter-accordion-list
+            a.filter-accordion-list__item Pants / shorts
+            a.filter-accordion-list__item shirts / T-shirts
+            a.filter-accordion-list__item Cardigans/ Sweaters
+
+    .filter-size
+      +sizeRadio('xs', 'XS')
+      +sizeRadio('s', 'S')
+      +sizeRadio('m', 'M')
+      +sizeRadio('l', 'L')
+      +sizeRadio('xl', 'XL')

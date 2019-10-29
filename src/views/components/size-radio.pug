@@ -1,0 +1,5 @@
+mixin sizeRadio(sizeId, size)
+  .size-radio-group
+    input.size-radio__input(type="radio", name="sizes", id="size-radio-" + sizeId)
+    label.size-radio__label(for="size-radio-" + sizeId)
+      span= size

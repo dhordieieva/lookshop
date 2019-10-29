@@ -1,0 +1,153 @@
+.catalog {
+  margin: 0 -15px;
+  display: flex;
+
+  &-thumbs-wrapper {
+    width: 76.5%;
+    padding: 0 15px;
+
+    .dropdown-menu {
+      padding: 6px 0;
+    }
+
+    .dropdown-toggle {
+      min-width: 100px;
+      padding: 8px;
+      background: #f4f4f4;
+
+      &__text {
+        font-size: 11px;
+        line-height: 14px;
+        color: #4d4d4d;
+      }
+
+      &__arrow {
+        width: 30px;
+        height: 30px;
+        background: #e5e5e5;
+      }
+    }
+  }
+
+  &-thumbs {
+    padding-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+
+    &-settings {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      align-items: center;
+      font-size: 11px;
+      line-height: 14px;
+      color: #4d4d4d;
+      margin-bottom: 15px;
+    }
+
+    &-block {
+      border-top: $border;
+    }
+
+    &__item {
+      width: 33.333%;
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &-sidebar {
+    width: 23.5%;
+    padding: 0 15px;
+
+    &-group {
+      margin-bottom: 22px;
+    }
+
+    &-title {
+      background: #000000;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 14px;
+      padding: 9px 8px 8px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .thumbs {
+    &-dropdown-list {
+      &__item {
+        padding: 0 8px;
+        font-size: 12px;
+        line-height: 18px;
+        color: #544f4d;
+        background: transparent;
+        cursor: pointer;
+        transition: background .3s ease, color .3s ease;
+
+        &:hover {
+          color: #ffffff;
+          background: $primary;
+        }
+      }
+    }
+
+    &-filter {
+      display: flex;
+      align-items: center;
+
+      &__text {
+        font-size: 11px;
+        line-height: 14px;
+        color: #4d4d4d;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.sidebar-product {
+  position: relative;
+  display: flex;
+  padding: 10px 0;
+  border-bottom: $border;
+  cursor: pointer;
+
+  &:after {
+    opacity: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(253, 146, 109, 0.1);
+    transition: opacity .3s ease;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+
+  &-img {
+    margin-right: 10px;
+  }
+
+  &-info {
+    &__name {
+      font-size: 12px;
+      line-height: 12px;
+      color: #5e5e5e;
+      margin-bottom: 7px;
+    }
+
+    &__price {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 600;
+      color: $primary;
+    }
+  }
+}

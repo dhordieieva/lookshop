@@ -1,0 +1,90 @@
+include ./thumb
+include ../components/size-radio
+
+.catalog-wrap
+  .container
+    .catalog
+      .catalog-thumbs-wrapper
+        .catalog-thumbs-settings
+          include ../components/pagination
+
+          .thumbs-filter
+            span.thumbs-filter__text Sort by
+            +dropdown('Date', '.thumbs-filter__dropdown')
+              ul.thumbs-dropdown-list
+                li.thumbs-dropdown-list__item Date
+                li.thumbs-dropdown-list__item Price Top
+                li.thumbs-dropdown-list__item Price Bottom
+                li.thumbs-dropdown-list__item Popularity
+                li.thumbs-dropdown-list__item Brand
+
+        .catalog-thumbs-block
+          .catalog-thumbs
+            .catalog-thumbs__item
+              +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo1.jpg')
+            .catalog-thumbs__item
+              +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo2.jpg')
+            .catalog-thumbs__item
+              +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo3.jpg')
+            .catalog-thumbs__item
+              +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo6.jpg')
+            .catalog-thumbs__item
+              +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo1.jpg')
+            .catalog-thumbs__item
+              +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo4.jpg')
+            .catalog-thumbs__item
+              +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo5.jpg')
+            .catalog-thumbs__item
+              +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo6.jpg')
+            .catalog-thumbs__item
+              +thumb('Mimosa Lace Dress', '$76.95', './images/temp/thumb/photo7.jpg')
+
+
+        .catalog-thumbs-settings
+          include ../components/pagination
+
+
+      .catalog-sidebar
+        .catalog-sidebar-group
+          .catalog-sidebar-title Categories
+          include ./filters
+
+        .catalog-sidebar-group
+          .catalog-sidebar-title On Sale
+          .sidebar-products
+            a.sidebar-product(href="#")
+              img.sidebar-product-img(src="./images/sale-img.jpg")
+              .sidebar-product-info
+                .sidebar-product-info__name PINTUCK TANK
+                .sidebar-product-info__price $45.55
+            a.sidebar-product(href="#")
+              img.sidebar-product-img(src="./images/sale-img1.jpg")
+              .sidebar-product-info
+                .sidebar-product-info__name FOLICIA SILK SHIRT
+                .sidebar-product-info__price $69.49
+            a.sidebar-product(href="#")
+              img.sidebar-product-img(src="./images/sale-img2.jpg")
+              .sidebar-product-info
+                .sidebar-product-info__name Laylala Shirt
+                .sidebar-product-info__price $78.25
+
+
+        .catalog-sidebar-group
+          .catalog-sidebar-title Featured Products
+          .sidebar-products
+            a.sidebar-product(href="#")
+              img.sidebar-product-img(src="./images/feat-img.jpg")
+              .sidebar-product-info
+                .sidebar-product-info__name Basic Sunglasses
+                .sidebar-product-info__price $14.95
+            a.sidebar-product(href="#")
+              img.sidebar-product-img(src="./images/feat-img1.jpg")
+              .sidebar-product-info
+                .sidebar-product-info__name Billie J
+                .sidebar-product-info__price $69.49
+            a.sidebar-product(href="#")
+                img.sidebar-product-img(src="./images/feat-img2.jpg")
+                .sidebar-product-info
+                  .sidebar-product-info__name Sandie Shopperbag
+                  .sidebar-product-info__price $69.95
+
