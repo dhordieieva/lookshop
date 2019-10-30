@@ -1,10 +1,21 @@
 .catalog {
-  margin: 0 -15px;
   display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+
+  @include respond-from(smd) {
+    margin: 0 -15px;
+    flex-direction: row;
+  }
+
 
   &-thumbs-wrapper {
-    width: 76.5%;
-    padding: 0 15px;
+    width: 100%;
+
+    @include respond-from(smd) {
+      width: 76.5%;
+      padding: 0 15px;
+    }
 
     .dropdown-menu {
       padding: 6px 0;
@@ -12,8 +23,12 @@
 
     .dropdown-toggle {
       min-width: 100px;
-      padding: 8px;
+      padding: 5px;
       background: #f4f4f4;
+
+      @include respond-from(sm) {
+        padding: 8px;
+      }
 
       &__text {
         font-size: 11px;
@@ -22,9 +37,14 @@
       }
 
       &__arrow {
-        width: 30px;
-        height: 30px;
+        width: 24px;
+        height: 24px;
         background: #e5e5e5;
+
+        @include respond-from(sm) {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }
@@ -37,13 +57,17 @@
 
     &-settings {
       display: flex;
-      justify-content: space-between;
-      flex-direction: row-reverse;
-      align-items: center;
+      justify-content: flex-end;
       font-size: 11px;
       line-height: 14px;
       color: #4d4d4d;
       margin-bottom: 15px;
+
+      @include respond-from(xsm) {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+      }
     }
 
     &-block {
@@ -51,33 +75,114 @@
     }
 
     &__item {
-      width: 33.333%;
+      width: 50%;
       padding: 0 15px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+
+      @include respond-from(xsm) {
+        width: 33.333%;
+        margin-bottom: 30px;
+      }
+    }
+
+    .thumb__preview.sale:after {
+      width: 40px;
+      height: 40px;
+      font-size: 9px;
+
+      @include respond-from(sm) {
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 
   &-sidebar {
-    width: 23.5%;
-    padding: 0 15px;
+    width: 100%;
+
+    @include respond-from(smd) {
+      width: 23.5%;
+      padding: 0 15px;
+    }
+
+    &.open .catalog-sidebar-group--filter{
+      display: block;
+    }
+
+    .btn--catalog-sidebar {
+      margin-bottom: 15px;
+      padding: 8px 14px 3px;
+      line-height: 14px;
+      min-width: 130px;
+      text-align: left;
+      width: 100%;
+
+      @include respond-from(smd) {
+        display: none;
+      }
+
+      &:after {
+        border-left: 4px solid transparent;
+        border-top: 4px solid #ffffff;
+        border-right: 4px solid transparent;
+        border-bottom: none;
+        transform: rotate(0deg);
+        transition: transform .3s ease;
+      }
+
+      &.open:after {
+        margin-top: -1px;
+        transform: rotate(180deg);
+      }
+
+    }
 
     &-group {
-      margin-bottom: 22px;
+      margin-bottom: 10px;
+
+      @include respond-from(sm) {
+        margin-bottom: 22px;
+      }
+
+      &--filter {
+        display: none;
+
+        @include respond-from(smd) {
+          display: block;
+        }
+      }
     }
 
     &-title {
-      background: #000000;
-      color: #ffffff;
+      background: transparent;
+      color: #000000;
       text-transform: uppercase;
-      font-size: 12px;
-      line-height: 14px;
-      padding: 9px 8px 8px;
-      margin-bottom: 10px;
+      font-size: 11px;
+      line-height: 12px;
+      padding: 4px 6px ;
+      margin-bottom: 4px;
+      user-select: none;
+
+      @include respond-from(sm) {
+        background: #000000;
+        color: #ffffff;
+        line-height: 14px;
+        padding: 7px 8px 6px;
+        margin-bottom: 8px;
+      }
+
+      @include respond-from(md) {
+        font-size: 12px;
+        padding: 9px 8px 8px;
+        margin-bottom: 10px;
+      }
     }
   }
 
   .thumbs {
+
     &-dropdown-list {
+
       &__item {
         padding: 0 8px;
         font-size: 12px;
@@ -97,6 +202,10 @@
     &-filter {
       display: flex;
       align-items: center;
+
+      @include respond-to(sm) {
+        margin-bottom: 10px;
+      }
 
       &__text {
         font-size: 11px;
@@ -149,5 +258,13 @@
       font-weight: 600;
       color: $primary;
     }
+  }
+}
+
+.catalog-sidebar-group + .catalog-sidebar-group {
+  display: none;
+
+  @include respond-from(smd) {
+    display: block;
   }
 }

@@ -1,7 +1,13 @@
 .pagination {
+  display: flex;
+
   &-block {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+
+    @include respond-from(sm) {
+      align-items: center;
+    }
 
     &__text {
       font-size: 11px;
@@ -28,6 +34,12 @@
     &.active {
       background: $primary;
       color: #ffffff;
+    }
+  }
+
+  &-wrap {
+    @include respond-to(sm) {
+      display: none;
     }
   }
 }

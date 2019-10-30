@@ -38,6 +38,12 @@ $(function() {
     }
   });
 
+  $('.btn--catalog-sidebar').on('click', function (event) {
+    var $this = $(event.currentTarget);
+    var $parent = $this.parent();
+    $this.toggleClass('open');
+    $parent.toggleClass('open');
+  });
 
   $('.js-counter .js-counterbtn-up').on('click', function (ev) {
     var $this = $(ev.currentTarget);

@@ -6,11 +6,12 @@ include ../components/radio-square
     .catalog
       .catalog-thumbs-wrapper
         .catalog-thumbs-settings
-          include ../components/pagination
+          .pagination-wrap
+            include ../components/pagination
 
           .thumbs-filter
             span.thumbs-filter__text Sort by
-            +dropdown('Date', '.thumbs-filter__dropdown')
+            +dropdown('Date', '.thumbs-filter__dropdown', 'right-top')
               ul.thumbs-dropdown-list
                 li.thumbs-dropdown-list__item Date
                 li.thumbs-dropdown-list__item Price Top
@@ -45,7 +46,8 @@ include ../components/radio-square
 
 
       .catalog-sidebar
-        .catalog-sidebar-group
+        .btn--catalog-sidebar.btn.btn--dark.btn--with-arr Filters
+        .catalog-sidebar-group.catalog-sidebar-group--filter
           .catalog-sidebar-title Categories
           include ./filters
 

@@ -17,12 +17,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
-    font-size: 11px;
-    line-height: 14px;
+    width: 26px;
+    height: 26px;
+    font-size: 9px;
+    line-height: 12px;
     color: #4d4d4d;
     background: #f4f4f4;
     cursor: pointer;
+
+    @include respond-from(md) {
+      width: 30px;
+      height: 30px;
+      font-size: 11px;
+      line-height: 14;
+    }
   }
 }
