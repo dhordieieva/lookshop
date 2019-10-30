@@ -1,7 +1,7 @@
 include ../components/radio-square
 include ../components/inputs
 
-form
+form(action="#")
   .filter
     #filter-accordion.filter-group(role='tablist', aria-multiselectable='true')
       .filter-group__item
@@ -56,10 +56,16 @@ form
             i.icon-plus
             i.icon-minus
         #collapseFive.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFive')
-          +radio('yes', 'yes', 'Yes', 'checked')
-          +radio('no', 'no', 'No')
-          +radio('maybe', 'maybe', 'Maybe')
+          +radio('yes', 'clearance', 'Yes', 'checked')
+          +radio('no', 'clearance', 'No')
+          +radio('maybe', 'clearance', 'Maybe')
 
+    .filter-range
+      input.js-range-slider(type='text', name='filterRange', data-from-fixed="false", data-type="double", data-min="50", data-max="300", data-from="0", data-to="200")
+      .range-price Price $
+        span.range-price__min 0
+        |- $
+        span.range-price__max 200
     .filter-size
       .filter-size__text Select your size
       .filter-size__radio-list
@@ -68,3 +74,4 @@ form
         +radioSquare('m', 'size', 'M')
         +radioSquare('l', 'size', 'L')
         +radioSquare('xl', 'size', 'XL')
+button.btn.btn--default(type="submit") Filter

@@ -1,0 +1,83 @@
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+  display: none;
+}
+
+.irs--flat .irs-min, .irs--flat .irs-max {
+  display: none;
+}
+
+.irs--flat .irs-bar {
+  background: $primary;
+  height: 6px;
+  top: 0;
+}
+
+.irs--flat .irs-handle {
+  top: 0;
+  width: 1px;
+  height: 14px;
+  transform: translateY(-25%);
+}
+
+.irs-handle.to {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 14px;
+    width: 12px;
+    border-radius: 50%;
+    border-bottom: 2px solid $auxiliary;
+    background: $primary;
+  }
+}
+
+.irs-handle.type_last {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 14px;
+    width: 12px;
+    border-radius: 50%;
+    border-bottom: 2px solid $auxiliary;
+    background: $primary;
+  }
+}
+.irs-handle.from {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 14px;
+    width: 12px;
+    border-radius: 50%;
+    border-bottom: 2px solid $auxiliary;
+    background: $primary;
+  }
+}
+
+.irs.irs--flat {
+  height: 23px;
+}
+
+.irs--flat .irs-handle > i {
+  display: none;
+
+  &:first-child {
+    display: none;
+  }
+}
+
+.irs--flat .irs-line {
+  top: 0;
+  height: 5px;
+  background-color: #e5e5e5;
+  border-radius: 0;
+}

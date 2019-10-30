@@ -68,7 +68,16 @@
 
   }
 
+  &-range {
+    font-size: 12px;
+    line-height: 18px;
+    color: #848484;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
   &-size {
+    margin-bottom: 20px;
 
     &__text {
       font-size: 12px;
