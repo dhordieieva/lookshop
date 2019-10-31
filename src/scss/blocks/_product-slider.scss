@@ -106,12 +106,29 @@
     position: relative;
 
     &__preview {
-      display: flex;
-      justify-content: center;
+      position: relative;
+      padding-bottom: 79.9618%;
       width: 100%;
+      overflow: hidden;
 
-      @include respond-from(sm) {
-        width: 60%;
+      &-wrap {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        @include respond-from(sm) {
+          width: 60%;
+        }
+      }
+
+      &-img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
       }
     }
 

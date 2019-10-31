@@ -83,12 +83,17 @@
     & + .wrap-fcustominp {margin-top: 5px;}
     .fcustominp-label {
       float: left;
-      font-size: 11px;
-      line-height: 16px;
+      font-size: 14px;
+      line-height: 18px;
       color: #333333;
       cursor: pointer;
       transition: color .3s ease;
       margin-left: 5px;
+
+      @include respond-from(smd) {
+        font-size: 11px;
+        line-height: 16px;
+      }
     }
     .fcustominp-label-block {
       border: 1px solid #cccccc;
@@ -120,15 +125,15 @@
   label {
     position: relative;
     display: block;
-    width: 8px;
-    height: 8px;
-    background: $primary;
-    border: 1px solid transparent;
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border: 2px solid $primary;
     cursor: pointer;
   }
 
   input[type=checkbox]:checked + label {
-    border-color: #000000;
+    background: $primary;
   }
 
   /*Make it a small rectangle so the border will create an L-shape*/
@@ -144,28 +149,11 @@
   //}
 
   input[type=radio] + label {
-    width: 8px;
-    height: 8px;
     border-radius: 50%;
+  }
+
+  input[type=radio]:checked + label {
     background: $primary;
-  }
-
-  input[type=radio] + label:after {
-    display: none;
-  }
-
-  input[type=radio]:checked + label:after {
-    content: '';
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 4px;
-    height: 4px;
-    background: #000000;
-    z-index: 1;
   }
 }
 

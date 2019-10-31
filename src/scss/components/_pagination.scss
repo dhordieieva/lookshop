@@ -38,7 +38,7 @@
   }
 
   &-wrap {
-    @include respond-to(sm) {
+    @include respond-to(smd) {
       display: none;
     }
   }

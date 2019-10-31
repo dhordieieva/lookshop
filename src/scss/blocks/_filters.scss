@@ -6,7 +6,7 @@
   }
 
   &-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
     @include respond-from(md) {
       margin-bottom: 30px;
@@ -14,28 +14,24 @@
   }
 
   .panel-collapse {
-    padding: 6px 8px;
-
-    @include respond-from(md) {
-      padding: 8px 10px;
-    }
+    padding: 8px 10px;
   }
 
   &-accordion {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 11px;
-    line-height: 12px;
+    font-size: 13px;
+    line-height: 15px;
     color: #000000;
     text-transform: uppercase;
     width: 100%;
-    padding: 4px 0;
+    padding: 8px 0;
     position: relative;
     border-bottom: $border;
     transition: color .3s ease;
 
-    @include respond-from(md) {
+    @include respond-from(smd) {
       font-size: 12px;
       line-height: 14px;
       padding: 6px 0;
@@ -46,12 +42,8 @@
     }
 
     i {
-      font-size: 8px;
+      font-size: 10px;
       color: #000000;
-
-      @include respond-from(md) {
-        font-size: 10px;
-      }
     }
 
     .icon-plus {
@@ -98,7 +90,6 @@
     color: #848484;
     text-transform: uppercase;
     margin-bottom: 20px;
-    max-width: 350px;
 
     @include respond-from(md) {
       margin-bottom: 40px;
@@ -106,25 +97,19 @@
   }
 
   &-size {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 
     @include respond-from(md) {
       margin-bottom: 20px;
     }
 
     &__text {
-      font-size: 11px;
-      line-height: 16px;
+      font-size: 12px;
+      line-height: 18px;
       text-transform: uppercase;
       color: #5e5e5e;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
       user-select: none;
-
-      @include respond-from(md) {
-        font-size: 12px;
-        line-height: 18px;
-        margin-bottom: 10px;
-      }
     }
 
     &__radio-list {
@@ -132,12 +117,24 @@
     }
   }
 
-  .btn--filter {
+  
+  &-control {
+    text-align: center;
+    margin-bottom: 30px;
+    
+    @include respond-from(smd) {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
 
-    @include respond-to(md) {
-      padding: 6px 14px 3px;
-      font-size: 11px;
-      line-height: 14px;
+  .btn--filter {
+    width: 30%;
+
+    @include respond-from(smd) {
+      width: auto;
     }
   }
 }
+
+

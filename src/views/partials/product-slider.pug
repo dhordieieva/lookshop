@@ -1,7 +1,8 @@
 mixin productSlide(imageUrl, slideName, slidePrice)
   .product-slide.swiper-slide
-    .product-slide__preview
-      img.product-slide__preview-img(src=imageUrl)
+    .product-slide__preview-wrap
+      .product-slide__preview
+        img.product-slide__preview-img(src=imageUrl)
     .product-slide__description
       .product-name.product-slide-name= slideName
       .product-price.product-slide-price= slidePrice

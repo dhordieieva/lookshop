@@ -177,6 +177,25 @@ $(function() {
     }
   });
 
+  var intervalId = null;
+  $('.js-play').on('click', function () {
+    if (!intervalId) {
+      intervalId = setInterval(function() {
+        galleryTop.slideNext();
+      }, 1000);
+    }
+  });
+
+  $('.js-pause').on('click', function () {
+    clearInterval(intervalId);
+    intervalId = null
+  });
+
+
   $(".js-range-slider").ionRangeSlider();
 
+  $('.js-select').select2({
+    minimumResultsForSearch: -1,
+  });
+  $('.js-select-search').select2();
 });

@@ -11,13 +11,12 @@ include ../components/radio-square
 
           .thumbs-filter
             span.thumbs-filter__text Sort by
-            +dropdown('Date', '.thumbs-filter__dropdown', 'right-top')
-              ul.thumbs-dropdown-list
-                li.thumbs-dropdown-list__item Date
-                li.thumbs-dropdown-list__item Price Top
-                li.thumbs-dropdown-list__item Price Bottom
-                li.thumbs-dropdown-list__item Popularity
-                li.thumbs-dropdown-list__item Brand
+            select.js-select
+              option(value="date") Date
+              option(value="priceTop") Price Top
+              option(value="priceBottom") Price Bottom
+              option(value="popularity") Popularity
+              option(value="brand") Brand
 
         .catalog-thumbs-block
           .catalog-thumbs

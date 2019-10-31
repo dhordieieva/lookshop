@@ -5,7 +5,8 @@
 
 @import "vendor/normalize";
 @import "vendor/swiper";
-
+@import "vendor/ion.rangeSlider";
+@import "vendor/select2.min";
 
 
 @import "base/fonts";
@@ -17,12 +18,12 @@
 @import "components/buttons";
 @import "components/helper-classes";
 @import "components/color-radio";
-@import "components/filters";
 @import "components/pagination";
-//@import "components/tabs";
+@import "components/tabs";
 @import "components/checkboxes";
 @import "components/radio-square";
-//@import "components/switches";
+@import "components/range";
+@import "components/select";
 
 
 @import "blocks/pre-header";
@@ -32,7 +33,6 @@
 @import "blocks/main-banner";
 @import "blocks/thumb";
 @import "blocks/offers";
-@import "components/tabs";
 @import "blocks/devider";
 @import "blocks/thumbs-one-row";
 @import "blocks/brands";
@@ -45,7 +45,4 @@
 @import "blocks/accordion";
 @import "blocks/product-slider";
 @import "blocks/catalog-block";
-
-
-//@import "vendor/vendor1";
-
+@import "blocks/filters";

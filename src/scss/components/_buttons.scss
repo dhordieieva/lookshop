@@ -38,6 +38,19 @@
     top: 1px;
   }
 
+  &--default {
+    color: #6f6f6f;
+    background: #e5e5e5;
+    border-bottom-color: #cccccc;
+    transition: background .2s ease, border-bottom-color .2s ease, color .2s ease;
+
+    &:hover {
+      color: #ffffff;
+      background: $primary;
+      border-bottom-color: $primary;
+    }
+  }
+
   &--big {
     font-size: 12px;
     line-height: 14px;
@@ -91,21 +104,37 @@
     min-width: 98px;
   }
 
-  &-square {
-    min-width: 28px;
-    width: 28px;
-    height: 28px;
+  &--square {
+    min-width: 22px;
+    width: 22px;
+    height: 22px;
     font-size: 11px;
     line-height: 14px;
-    padding: 7px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond-from(sm) {
+      min-width: 28px;
+      width: 28px;
+      height: 28px;
+    }
 
     &.btn--big {
-      min-width: 36px;
-      width: 36px;
-      height: 36px;
+      min-width: 24px;
+      width: 24px;
+      height: 24px;
+
+      @include respond-from(sm) {
+        min-width: 30px;
+        width: 30px;
+        height: 30px;
+      }
     }
 
     &.btn--biggest {
+      min-width: 36px;
       width: 36px;
       height: 36px;
       padding: 10px 7px;
@@ -139,7 +168,7 @@
     }
   }
 
-  &--with-arr {
+  &.btn--with-arr {
     padding-right: 33px;
 
     &:after {
@@ -150,19 +179,20 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: 10%;
+      right: 10px;
     }
   }
 
-  &.btn-dark {
+  &.btn--dark {
     background: #000000;
+    border-bottom-color: #000000;
 
     &:hover {
       background: #3e3333;
     }
   }
 
-  &.btn-secondary-color {
+  &.btn--secondary {
     background: $secondary;
 
     &:hover {
@@ -170,7 +200,7 @@
     }
   }
 
-  &.btn-without-border-botttom {
+  &.btn--not-bordered {
     border-bottom: none;
   }
 }
