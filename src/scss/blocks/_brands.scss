@@ -33,9 +33,7 @@
     &__item {
       padding: 0 10px;
 
-      &:nth-child(7),
-      &:nth-child(8),
-      &:nth-child(9) {
+      &:nth-child(n+7) {
         @include respond-to(sm) {
           display: none;
         }

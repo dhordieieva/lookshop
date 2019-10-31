@@ -99,7 +99,7 @@
   &-size {
     margin-bottom: 10px;
 
-    @include respond-from(md) {
+    @include respond-from(smd) {
       margin-bottom: 20px;
     }
 

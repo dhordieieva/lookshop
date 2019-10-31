@@ -49,6 +49,7 @@
     .form {
       position: relative;
       width: 100%;
+      display: flex;
 
       @include respond-from(xsm) {
         width: initial;

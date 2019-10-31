@@ -9,12 +9,12 @@
 
 .product {
 
-  @include respond-to(xsm) {
+  @include respond-to(sm) {
     padding-top: 50px;
     position: relative;
   }
 
-  @include respond-from(xsm) {
+  @include respond-from(sm) {
     margin: 0 -15px;
     display: flex;
   }
@@ -26,12 +26,7 @@
       width: 100%;
       margin-bottom: 20px;
 
-      @include respond-from(xsm) {
-        width: 50%;
-        margin-bottom: 0;
-      }
-
-      @include respond-from(smd) {
+      @include respond-from(sm) {
         width: 43%;
       }
   }
@@ -39,11 +34,7 @@
     &--info {
       width: 100%;
 
-      @include respond-from(xsm) {
-        width: 50%;
-      }
-
-      @include respond-from(smd) {
+      @include respond-from(sm) {
         width: 57%;
       }
     }
@@ -76,7 +67,7 @@
     cursor: pointer;
     padding: 7px 0 7px 15px;
 
-    @include respond-from(xsm) {
+    @include respond-from(sm) {
       line-height: 18px;
       padding: 12px 0 12px 15px;
     }
@@ -95,7 +86,7 @@
       border-bottom: 1px solid #d6d6d6;
       margin-bottom: 7px;
 
-      @include respond-from(xsm) {
+      @include respond-from(sm) {
         position: static;
         transform: translateX(0);
         margin-bottom: 15px;
@@ -109,7 +100,7 @@
       color: #cccccc;
       font-weight: 700;
 
-      @include respond-from(xsm) {
+      @include respond-from(sm) {
         top: 15px;
       }
     }
@@ -205,10 +196,26 @@
 
   &-details {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
     padding: 10px 0;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
+    border-bottom: none;
+
+    @include respond-from(xs) {
+      margin-bottom: 24px;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 1px solid #d6d6d6;
+    }
+
+    &__size {
+
+      @include respond-to(xs) {
+        margin-bottom: 20px;
+      }
+    }
 
     &-colors__item {
       display: inline-block;
@@ -234,7 +241,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    @include respond-from(xs) {
+    @include respond-from(sm) {
       justify-content: flex-start;
     }
   }
@@ -268,6 +275,24 @@
     .product-quantity__input::-webkit-inner-spin-button {
       -webkit-appearance: none;
     }
+  }
+
+  .select2-container {
+    width: 190px !important;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height: 14px;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #4d4d4d;
+  }
+
+  .select2-results__option {
+    padding: 5px;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 

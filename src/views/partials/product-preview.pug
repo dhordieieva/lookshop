@@ -62,6 +62,13 @@ mixin productSizeList(list)
         form(action="#")
           .product-details.bordered-section
             .product-details__size
+              select.select-placeholder
+                option(value="")
+                option(value="xs") Xs
+                option(value="s") S
+                option(value="m") M
+                option(value="l") L
+                option(value="xl") Xl
 
             .product-details__color
               +colorsRadio([['yellow', '#efebe2'], ['gray', '#c9c1c6'], ['brown', '#b29b88'], ['terracotta', '#968886'], ['blue', '#cde0ef']])

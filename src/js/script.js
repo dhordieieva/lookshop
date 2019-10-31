@@ -197,5 +197,11 @@ $(function() {
   $('.js-select').select2({
     minimumResultsForSearch: -1,
   });
+
   $('.js-select-search').select2();
+
+  $('.select-placeholder').select2({
+    minimumResultsForSearch: -1,
+    placeholder: 'Select size',
+  });
 });

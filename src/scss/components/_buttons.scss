@@ -194,9 +194,11 @@
 
   &.btn--secondary {
     background: $secondary;
+    border-bottom-color: darken(desaturate(adjust-hue(#4fafa0, 1), 8.38), 13.14);
 
     &:hover {
       background: lighten(desaturate(#4fafa0, 0.05), 20.59);
+      border-bottom-color: darken(desaturate(adjust-hue(#4fafa0, 1), 8.38), 13.14);
     }
   }
 
