@@ -1,10 +1,13 @@
 extends layouts/default
+include partials/breadcrumbs
 
 block title
   title LookShop - Product
 
 block content
+  +breadcrumbs(['Women', 'Clothing'])
   include partials/product-preview
   include partials/social
   include partials/accordion
   include partials/product-thumbs
+

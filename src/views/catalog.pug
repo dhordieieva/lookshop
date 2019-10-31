@@ -1,8 +1,10 @@
 extends layouts/default
+include partials/breadcrumbs
 
 block title
   title LookShop - Catalog
 
 block content
+  +breadcrumbs(['Women', 'Clothing', 'Blouses & Shirts', 'B.young', 'Sofi Blouse'])
   include partials/product-slider
   include partials/catalog-block

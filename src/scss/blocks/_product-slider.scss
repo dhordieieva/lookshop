@@ -47,7 +47,8 @@
 
     &-inner {
       position: relative;
-      padding: 17px 5.1546% 0;
+      padding: 0 5.1546%;
+      border-bottom: $border;
     }
 
     &__btn {

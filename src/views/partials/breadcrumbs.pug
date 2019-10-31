@@ -1,0 +1,12 @@
+mixin breadcrumbs(linksText)
+  .breadcrumbs-wrapper
+    .container
+      ul.breadcrumbs.bordered-section
+        li.breadcrumbs__item.breadcrumbs__item--home
+          a.breadcrumbs__link.breadcrumbs__link--home(href="index.html")
+            i.icon-home
+        each linkText in linksText
+          li.breadcrumbs__item
+            i.icon-arr-right
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#")= linkText
